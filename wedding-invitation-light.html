@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zohan &amp; Rose – Royal Wedding Invitation (Light Theme)</title>
+<meta name="description" content="Together with their families, Zohan and Rose joyfully invite you to celebrate their wedding.">
+<meta property="og:title" content="Zohan &amp; Rose – Wedding Invitation">
+<meta property="og:description" content="A celebration of love, laughter, and forever. Join us on 27.09.2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f8f1ea;
+  --card: #fffdfb;
+  --ink: #4e272d;
+  --ink-light: #7b4f55;
+  --rose: #b56c75;
+  --rose-light: #edd8d7;
+  --gold: #c59341;
+  --gold-glow: rgba(197, 147, 65, 0.45);
+  --wax: #7d202d;
+  --wax-dark: #56111b;
+  --line: #e8d7cf;
+  box-sizing: border-box;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #251619;
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.6;
+  text-align: center;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.script {
+  font-family: 'Great Vibes', 'Brush Script MT', cursive;
+  font-weight: 400;
+}
+
+/* Master canvas - centered on desktop, full-width on mobile */
+.wrap {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--card);
+  min-height: 100vh;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+/* TOP THEME & VIDEO SWITCHER BAR */
+.theme-switch-bar {
+  position: sticky;
+  top: 0;
+  z-index: 95;
+  background: rgba(255, 253, 251, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.theme-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #2a1519;
+  color: #f7e6d9;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.theme-pill:hover {
+  background: var(--wax);
+  transform: translateY(-1px);
+}
+
+.video-toggle-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.v-btn {
+  background: #f3e5dc;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 4px 9px;
+  border-radius: 14px;
+  font-size: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s;
+}
+
+.v-btn.active {
+  background: var(--rose);
+  color: #fff;
+  border-color: var(--rose);
+}
+
+/* ===================================================
+   1. VIDEO UNBOXING / REVEAL STAGE
+   =================================================== */
+#videoUnboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 45%, #2a1519 0%, #15090b 70%, #0a0405 100%);
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), transform 0.9s ease, visibility 0.9s;
+  padding: 16px;
+  overflow: hidden;
+}
+
+#videoUnboxOverlay.revealed {
+  opacity: 0;
+  transform: scale(1.04);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.video-frame-box {
+  position: relative;
+  width: min(88vw, 360px);
+  aspect-ratio: 9 / 16;
+  max-height: 82vh;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 235, 215, 0.2);
+  cursor: pointer;
+  background: #110708;
+}
+
+#unboxVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+/* Tap Prompt Overlay */
+.video-prompt-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 6, 8, 0.38);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  transition: opacity 0.5s ease;
+  z-index: 3;
+}
+
+.video-prompt-layer.hiding {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.prompt-wax-seal {
+  width: 84px;
+  height: 84px;
+  border-radius: 48% 52% 49% 51% / 52% 48% 52% 48%;
+  background: radial-gradient(circle at 35% 30%, #a83242 0%, #7d1c29 45%, #560f18 85%, #3d0810 100%);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.65),
+    0 0 0 4px rgba(255, 235, 215, 0.4),
+    0 0 35px 12px var(--gold-glow),
+    inset 0 3px 5px rgba(255, 255, 255, 0.45),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff2db;
+  font-size: 30px;
+  animation: sealFloat 2.8s ease-in-out infinite;
+  user-select: none;
+}
+
+.prompt-wax-seal span {
+  font-family: 'Great Vibes', cursive;
+  background: linear-gradient(135deg, #fff8ee 20%, #f0c98f 60%, #e2ab5b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 2px rgba(40, 0, 5, 0.8));
+}
+
+.prompt-cta {
+  margin-top: 22px;
+  color: #fff2e8;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: pulseText 2s ease-in-out infinite;
+}
+
+.prompt-line {
+  width: 1px;
+  height: 24px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+}
+
+/* Golden reveal flash */
+.video-flash-layer {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 248, 235, 0.95) 0%, rgba(212, 163, 89, 0.6) 50%, transparent 100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 4;
+  transition: opacity 0.4s ease-out;
+}
+
+.video-flash-layer.flashing {
+  opacity: 1;
+}
+
+@keyframes sealFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.65), 0 0 0 4px rgba(255,235,215,0.4), 0 0 30px 10px var(--gold-glow);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.75), 0 0 0 6px rgba(255,245,230,0.6), 0 0 45px 18px rgba(212, 163, 89, 0.7);
+  }
+}
+
+@keyframes pulseText {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+/* ===================================================
+   2. HERO PALACE ARCH & SWANS (FIRST SECTION - LIGHT)
+   =================================================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 640px;
+  max-height: 940px;
+  background-color: #f7ede5;
+  background-image: url('assets/hero-arch-swans.jpg');
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 24px 34px;
+  overflow: hidden;
+  box-shadow: inset 0 -30px 40px rgba(0,0,0,0.15);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 36%, rgba(255, 248, 240, 0.25) 0%, rgba(250, 237, 227, 0.1) 50%, rgba(55, 22, 28, 0.25) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-top: 14%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9), 0 2px 14px rgba(255, 250, 245, 0.8);
+}
+
+.hero-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.hero-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(38px, 9vw, 50px);
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.hero-date {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 21px;
+  letter-spacing: 0.28em;
+  color: var(--rose);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.hero-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 140px;
+  margin-bottom: 12px;
+}
+.hero-divider::before, .hero-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--rose), transparent);
+}
+.hero-divider span {
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.hero-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(54px, 13.5vw, 76px);
+  line-height: 1.02;
+  color: #491720;
+  text-shadow: 
+    0 1px 2px rgba(255, 255, 255, 0.9),
+    0 3px 18px rgba(255, 240, 230, 0.9);
+}
+
+.hero-names .amp {
+  display: block;
+  font-size: clamp(30px, 7vw, 40px);
+  color: var(--rose);
+  margin: -4px 0 -2px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-scroll {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #491b22;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.hero-scroll .scroll-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.hero-scroll .scroll-arrow {
+  font-size: 16px;
+  color: var(--rose);
+  animation: bounceDown 2s infinite ease-in-out;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ===================================================
+   3. FLOATING PETALS
+   =================================================== */
+.petal-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.drift-petal {
+  position: absolute;
+  top: -20px;
+  background: radial-gradient(circle at 30% 30%, #fbe8e7 0%, #e8b4b7 55%, #c77b83 100%);
+  border-radius: 80% 20% 75% 25%;
+  opacity: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+  animation: petalFall linear infinite;
+}
+
+@keyframes petalFall {
+  0% { opacity: 0; transform: translateY(0) rotate(0deg) scale(0.6); }
+  15% { opacity: 0.85; }
+  85% { opacity: 0.75; }
+  100% { opacity: 0; transform: translateY(105vh) translateX(var(--drift-x, 40px)) rotate(360deg) scale(1); }
+}
+
+/* ===================================================
+   4. CONTENT SECTIONS
+   =================================================== */
+section {
+  position: relative;
+  padding: 60px 28px;
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+}
+
+.section-arch-frame {
+  position: relative;
+  padding: 42px 20px 36px;
+  border: 1px solid rgba(223, 194, 185, 0.45);
+  border-radius: 50% 50% 8px 8px / 14% 14% 8px 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(253, 246, 241, 0.5) 100%);
+  box-shadow: 0 4px 20px rgba(110, 60, 50, 0.04);
+}
+
+.arabic-header {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  font-size: 30px;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+  color: var(--rose);
+}
+
+.flourish-icon {
+  display: block;
+  margin: 6px auto 18px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+p {
+  margin: 0 0 16px;
+  color: var(--ink-light);
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+/* ===================================================
+   5. COUNTDOWN & CALENDAR
+   =================================================== */
+.countdown-box {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.countdown-box .cd-pill {
+  min-width: 68px;
+  padding: 12px 6px 10px;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 14px rgba(100, 50, 50, 0.05);
+}
+
+.countdown-box b {
+  display: block;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.countdown-box small {
+  display: block;
+  margin-top: 6px;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rose);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* ===================================================
+   6. SCHEDULE TIMELINE
+   =================================================== */
+.timeline {
+  position: relative;
+  max-width: 320px;
+  margin: 18px auto 0;
+  text-align: left;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 82px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--rose-light), var(--rose), var(--rose-light));
+}
+
+.timeline-event {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.timeline-event::after {
+  content: "❀";
+  position: absolute;
+  left: 75px;
+  font-size: 15px;
+  color: var(--rose);
+  background: var(--card);
+  padding: 2px 0;
+}
+
+.timeline-event time {
+  width: 64px;
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--ink);
+  text-align: right;
+  padding-right: 18px;
+}
+
+.timeline-event span {
+  padding-left: 28px;
+  color: var(--ink-light);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ===================================================
+   7. VENUE & MAP
+   =================================================== */
+.venue-emblem {
+  font-size: 46px;
+  margin-bottom: 8px;
+}
+
+.map-embed {
+  width: 100%;
+  height: 230px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin-top: 20px;
+  filter: saturate(0.8) contrast(1.05);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 28px;
+  border: 1px solid var(--rose);
+  border-radius: 4px;
+  color: var(--ink);
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(181, 108, 117, 0.12);
+}
+
+.btn:hover {
+  background: var(--rose);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn.solid {
+  background: var(--wax);
+  color: #fff;
+  border-color: var(--wax);
+}
+
+.btn.solid:hover {
+  background: var(--wax-dark);
+}
+
+/* ===================================================
+   8. RSVP FORM
+   =================================================== */
+form {
+  display: grid;
+  gap: 14px;
+  text-align: left;
+  margin-top: 22px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(181, 108, 117, 0.15);
+  background: #fff;
+}
+
+/* ===================================================
+   9. MUSIC BUTTON
+   =================================================== */
+.music-btn {
+  position: fixed;
+  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 235, 215, 0.7);
+  background: radial-gradient(circle at 35% 30%, #9e2a39 0%, #681622 100%);
+  color: #fff;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(80, 15, 25, 0.45);
+  transition: transform 0.25s;
+}
+
+.music-btn.playing {
+  animation: pulseMusic 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseMusic {
+  0%, 100% { box-shadow: 0 8px 22px rgba(80, 15, 25, 0.45); }
+  50% { box-shadow: 0 10px 28px rgba(80, 15, 25, 0.65), 0 0 0 6px rgba(212, 163, 89, 0.4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- THEME SWITCHER BAR -->
+<div class="theme-switch-bar">
+  <div style="font-weight: 600; color: var(--ink);">☀️ LIGHT THEME</div>
+  <div class="video-toggle-btns">
+    <button class="v-btn active" id="vEnvBtn" type="button" title="Use Envelope video">✉️ Envelope</button>
+    <button class="v-btn" id="vRingBtn" type="button" title="Use Ring video">💍 Ring</button>
+  </div>
+  <a class="theme-pill" href="wedding-invitation-dark.html" title="Switch to Dark Theme">🌙 Dark Theme</a>
+</div>
+
+<!-- ===================================================
+     1. VIDEO UNBOXING OVERLAY (ON CLICK -> VIDEO PLAYS & REVEALS)
+     =================================================== -->
+<div id="videoUnboxOverlay" role="dialog" aria-modal="true" aria-label="Interactive wedding invitation reveal">
+  <div class="video-frame-box" id="videoBox">
+    <!-- Video Player -->
+    <video id="unboxVideo" playsinline webkit-playsinline muted preload="auto">
+      <source id="videoSrc" src="assets/envelope.mp4" type="video/mp4">
+    </video>
+
+    <!-- Tap to Open Prompt -->
+    <div class="video-prompt-layer" id="videoPrompt">
+      <div class="prompt-wax-seal">
+        <span class="script" id="sealInitials">Z&amp;R</span>
+      </div>
+      <div class="prompt-cta">
+        <span>Tap to Open Invitation</span>
+        <div class="prompt-line"></div>
+      </div>
+    </div>
+
+    <!-- Golden flash transition on reveal -->
+    <div class="video-flash-layer" id="videoFlash"></div>
+  </div>
+</div>
+
+<!-- ===================================================
+     2. MAIN INVITATION WEBPAGE
+     =================================================== -->
+<div class="wrap">
+
+  <!-- HERO SECTION: PALACE ARCH & SWANS (FIRST SECTION) -->
+  <section class="hero-section" id="heroSec">
+    <div class="hero-overlay"></div>
+    <div class="petal-canvas" id="petalCanvas"></div>
+
+    <div class="hero-content">
+      <div class="hero-sub">Together with their families</div>
+      <div class="hero-title">Wedding Day</div>
+      <div class="hero-date" id="dateTxt">27.09.26</div>
+      <div class="hero-divider"><span>❦</span></div>
+      
+      <div class="hero-names" id="heroNames">
+        Zohan
+        <span class="amp">&amp;</span>
+        Rose
+      </div>
+    </div>
+
+    <div class="hero-scroll" id="scrollBtn">
+      <span class="scroll-text">Scroll to explore</span>
+      <span class="scroll-arrow">⌄</span>
+    </div>
+  </section>
+
+  <!-- SECTION 2: BISMILLAH & LIVE COUNTDOWN -->
+  <section>
+    <div class="section-arch-frame">
+      <div class="arabic-header">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+      <h2>Two Souls, One Destiny</h2>
+      <span class="flourish-icon">❦</span>
+      <p style="font-size: 21px; font-style: italic; color: var(--ink);">“A lifetime written by Allah.”</p>
+      <p>Dear friends and family, join us for an evening of love, laughter, heartfelt duas, and unforgettable memories as we begin our forever journey together.</p>
+      
+      <h2 style="margin-top: 36px; font-size: 38px;">The Celebration Begins In</h2>
+      <div class="countdown-box" id="cd"></div>
+      
+      <div style="margin-top: 26px;">
+        <button class="btn" id="addToCalBtn" type="button">📅 Add to Calendar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SCHEDULE OF EVENTS -->
+  <section>
+    <h2>Schedule of Events</h2>
+    <span class="flourish-icon">✿</span>
+    <div class="timeline" id="tl"></div>
+  </section>
+
+  <!-- SECTION 4: VENUE & LOCATION -->
+  <section>
+    <h2>The Venue</h2>
+    <span class="flourish-icon">❦</span>
+    <div class="venue-emblem">🕌</div>
+    <p id="venue" style="color: var(--ink); font-weight: 700; font-size: 24px; margin-bottom: 4px;"></p>
+    <p id="addr" style="font-size: 18px;"></p>
+    
+    <iframe class="map-embed" id="map" loading="lazy" title="Venue Map"></iframe>
+    <br>
+    <a class="btn solid" id="dir" target="_blank" rel="noopener">📍 Get Directions</a>
+  </section>
+
+  <!-- SECTION 5: DRESS CODE & GIFT PREFERENCE -->
+  <section>
+    <h2>Dress Code</h2>
+    <span class="flourish-icon">❀</span>
+    <p>We kindly ask our cherished guests to dress in formal evening attire with soft, deep rose, blush, or champagne tones for this joyous celebration.</p>
+    
+    <h2 style="margin-top: 36px;">Gift Preference</h2>
+    <span class="flourish-icon">❦</span>
+    <p>Kindly, no boxed gifts please. Your presence and heartfelt prayers are our greatest blessings.</p>
+  </section>
+
+  <!-- SECTION 6: RSVP FORM -->
+  <section>
+    <h2>Confirm Your Attendance</h2>
+    <span class="flourish-icon">✿</span>
+    <p>To help us prepare for a magnificent celebration, kindly let us know if you will be joining us.</p>
+    
+    <form id="rsvp">
+      <input name="n" placeholder="Your Full Name" aria-label="Your Full Name" required>
+      <select name="a" aria-label="Attendance status">
+        <option value="Joyfully accepts">Joyfully accepts with pleasure</option>
+        <option value="Regretfully declines">Regretfully declines with love</option>
+      </select>
+      <input name="g" type="number" min="1" max="10" placeholder="Number of Guests" aria-label="Number of Guests" value="1">
+      <textarea name="m" rows="2" placeholder="A heartfelt blessing or message for the couple (optional)" aria-label="Message for the couple"></textarea>
+      <button class="btn solid" type="submit">💌 Send RSVP via WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- SECTION 7: FOOTER -->
+  <section style="padding: 44px 24px 60px; border-bottom: 0;">
+    <h2>With Love &amp; Gratitude</h2>
+    <p class="script" style="font-size: 34px; color: var(--ink); margin-top: 10px;" id="sign">Zohan &amp; Rose</p>
+    <p style="font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--rose); margin-top: 8px;">See you at the wedding</p>
+  </section>
+
+</div>
+
+<!-- MUSIC CONTROLLER -->
+<button class="music-btn" id="mus" aria-label="Toggle background music" title="Toggle music">♪</button>
+<audio id="aud" loop preload="auto"></audio>
+
+<script>
+// ==========================================
+// CONFIGURATION
+// ==========================================
+const C = {
+  groom: "Zohan",
+  bride: "Rose",
+  date: "2026-09-27T19:00:00+05:00",
+  dateText: "27.09.26",
+  venue: "Grand Palace Banquet",
+  addr: "Main Boulevard, Islamabad, Pakistan",
+  whatsapp: "923001234567",
+  audio: "",
+  video: "assets/envelope.mp4",
+  events: [
+    ["7:00 PM", "Guest Arrival & Welcome Drinks"],
+    ["8:00 PM", "Sacred Nikkah Ceremony"],
+    ["9:00 PM", "Musical Hour & Photography"],
+    ["10:00 PM", "Royal Dinner & Dua"]
+  ]
+};
+
+const $ = id => document.getElementById(id);
+const aud = $('aud');
+const mus = $('mus');
+const video = $('unboxVideo');
+const overlay = $('videoUnboxOverlay');
+const promptLayer = $('videoPrompt');
+const flash = $('videoFlash');
+
+// Set monograms & names
+const initials = C.groom[0] + '&' + C.bride[0];
+$('sealInitials').textContent = initials;
+$('heroNames').innerHTML = `${C.groom}<span class="amp">&amp;</span>${C.bride}`;
+$('dateTxt').textContent = C.dateText;
+$('venue').textContent = C.venue;
+$('addr').textContent = C.addr;
+$('sign').textContent = `${C.groom} & ${C.bride}`;
+
+// Dynamic map & directions links
+$('map').src = 'https://www.google.com/maps?q=' + encodeURIComponent(C.venue + ' ' + C.addr) + '&output=embed';
+$('dir').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(C.venue + ' ' + C.addr);
+
+// Timeline events
+$('tl').innerHTML = C.events.map(e => `
+  <div class="timeline-event">
+    <time>${e[0]}</time>
+    <span>${e[1]}</span>
+  </div>
+`).join('');
+
+// Countdown
+function tickCountdown() {
+  const diff = Math.max(0, new Date(C.date) - new Date());
+  const totalSecs = Math.floor(diff / 1000);
+  const values = [Math.floor(totalSecs / 86400), Math.floor((totalSecs % 86400) / 3600), Math.floor((totalSecs % 3600) / 60), totalSecs % 60];
+  const labels = ['Days', 'Hours', 'Minutes', 'Seconds'];
+  $('cd').innerHTML = values.map((val, idx) => `
+    <div class="cd-pill">
+      <b>${String(val).padStart(2, '0')}</b>
+      <small>${labels[idx]}</small>
+    </div>
+  `).join('');
+}
+tickCountdown();
+setInterval(tickCountdown, 1000);
+
+// Add to calendar
+$('addToCalBtn').onclick = () => {
+  const title = encodeURIComponent(`${C.groom} & ${C.bride}'s Wedding`);
+  const details = encodeURIComponent(`Wedding celebration of ${C.groom} & ${C.bride} at ${C.venue}, ${C.addr}`);
+  const location = encodeURIComponent(`${C.venue}, ${C.addr}`);
+  window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=20260927T140000Z/20260927T180000Z`, '_blank');
+};
+
+// ==========================================
+// VIDEO PLAY AS ANIMATION & REVEAL
+// ==========================================
+let hasStarted = false;
+let hasRevealed = false;
+
+function revealInvitation() {
+  if (hasRevealed) return;
+  hasRevealed = true;
+  
+  flash.classList.add('flashing');
+  setTimeout(() => {
+    overlay.classList.add('revealed');
+    document.body.style.overflow = '';
+  }, 350);
+
+  // Play audio if provided
+  if (C.audio) {
+    aud.src = C.audio;
+    aud.play().then(() => {
+      mus.classList.add('playing');
+      mus.textContent = '❚❚';
+    }).catch(() => {});
+  }
+}
+
+function handleVideoClick() {
+  if (!hasStarted) {
+    hasStarted = true;
+    promptLayer.classList.add('hiding');
+    
+    // Play video smoothly
+    video.currentTime = 0;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // If browser blocks video play, reveal directly
+        revealInvitation();
+      });
+    }
+  } else {
+    // If clicked while playing, skip directly to reveal
+    revealInvitation();
+  }
+}
+
+$('videoBox').onclick = handleVideoClick;
+
+// Monitor video progress to trigger golden flash right as envelope opens / ring bursts
+video.addEventListener('timeupdate', () => {
+  if (video.duration && video.currentTime >= video.duration - 0.45) {
+    revealInvitation();
+  }
+});
+video.addEventListener('ended', revealInvitation);
+
+// Lock scroll during video cover
+document.body.style.overflow = 'hidden';
+
+// Video switchers in top bar
+$('vEnvBtn').onclick = () => {
+  $('vEnvBtn').classList.add('active');
+  $('vRingBtn').classList.remove('active');
+  video.pause();
+  video.src = 'assets/envelope.mp4';
+  video.load();
+  hasStarted = false;
+  promptLayer.classList.remove('hiding');
+};
+
+$('vRingBtn').onclick = () => {
+  $('vRingBtn').classList.add('active');
+  $('vEnvBtn').classList.remove('active');
+  video.pause();
+  video.src = 'assets/ring.mp4';
+  video.load();
+  hasStarted = false;
+  promptLayer.classList.remove('hiding');
+};
+
+// Scroll down button
+$('scrollBtn').onclick = () => {
+  window.scrollBy({ top: window.innerHeight * 0.85, behavior: 'smooth' });
+};
+
+// Ambient falling petals
+function spawnHeroPetals() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const canvas = $('petalCanvas');
+  for (let i = 0; i < 15; i++) {
+    const p = document.createElement('div');
+    p.className = 'drift-petal';
+    const size = 10 + Math.random() * 10;
+    p.style.width = size + 'px';
+    p.style.height = (size * 1.35) + 'px';
+    p.style.left = (Math.random() * 92) + '%';
+    p.style.animationDuration = (6 + Math.random() * 6) + 's';
+    p.style.animationDelay = (Math.random() * 5) + 's';
+    p.style.setProperty('--drift-x', (Math.random() * 80 - 40) + 'px');
+    canvas.appendChild(p);
+  }
+}
+spawnHeroPetals();
+
+// Music player controls
+if (!C.audio) {
+  mus.onclick = () => {
+    alert("Background music is optional. Set C.audio in the script to enable lovely instrumental music!");
+  };
+} else {
+  mus.onclick = () => {
+    if (aud.paused) {
+      aud.play();
+      mus.classList.add('playing');
+      mus.textContent = '❚❚';
+    } else {
+      aud.pause();
+      mus.classList.remove('playing');
+      mus.textContent = '♪';
+    }
+  };
+}
+
+// RSVP WhatsApp submission
+$('rsvp').onsubmit = e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  let text = `*WEDDING RSVP*\n👤 *Name:* ${f.get('n')}\n💌 *Status:* ${f.get('a')}\n👥 *Guests:* ${f.get('g')}\n`;
+  if (f.get('m')) text += `💬 *Message:* ${f.get('m')}\n`;
+  window.open(`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(text)}`, '_blank');
+};
+</script>
+</body>
+</html>

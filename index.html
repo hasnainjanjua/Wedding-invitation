@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zohan &amp; Rose – Royal Wedding Invitation</title>
+<meta name="description" content="Choose your invitation experience: Ivory Daylight or Midnight Royal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #d4a359;
+  --gold-glow: rgba(212, 163, 89, 0.45);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 30%, #1f0b10 0%, #0d0406 60%, #050102 100%);
+  color: #fff;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+.script { font-family: 'Great Vibes', cursive; }
+.portal-card {
+  max-width: 520px;
+  width: 100%;
+  padding: 44px 28px;
+  border: 1px solid rgba(212, 163, 89, 0.35);
+  border-radius: 12px;
+  background: rgba(26, 11, 16, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), inset 0 0 35px rgba(212, 163, 89, 0.08);
+}
+.eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+h1 {
+  font-size: clamp(48px, 12vw, 68px);
+  line-height: 1.05;
+  color: #fff6ee;
+  margin-bottom: 6px;
+  text-shadow: 0 0 20px rgba(212, 163, 89, 0.4);
+}
+h1 span {
+  display: block;
+  font-size: 32px;
+  color: var(--gold);
+  margin: -6px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+.date {
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  color: #eed5ce;
+  margin-bottom: 30px;
+}
+.instruction {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #cbb4ad;
+  margin-bottom: 24px;
+}
+.choice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 480px) {
+  .choice-grid { grid-template-columns: 1fr; }
+}
+.choice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.choice-light {
+  background: linear-gradient(145deg, #fffcf9 0%, #f4e8df 100%);
+  color: #4a1d24;
+  border: 1px solid rgba(181, 108, 117, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.choice-light:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(212, 163, 89, 0.35);
+  border-color: var(--gold);
+}
+.choice-dark {
+  background: linear-gradient(145deg, #240f16 0%, #120609 100%);
+  color: #fcefe6;
+  border: 1px solid rgba(212, 163, 89, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+.choice-dark:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(212, 163, 89, 0.45);
+  border-color: var(--gold);
+}
+.choice-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.choice-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.choice-desc {
+  font-size: 14px;
+  opacity: 0.8;
+  font-style: italic;
+}
+.feature-list {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(212, 163, 89, 0.2);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #bfa39b;
+}
+</style>
+</head>
+<body>
+
+<div class="portal-card">
+  <div class="eyebrow">The Royal Wedding Invitation</div>
+  <h1 class="script">Zohan <span>&amp;</span> Rose</h1>
+  <div class="date">27 · 09 · 2026</div>
+
+  <div class="instruction">Choose your experience</div>
+
+  <div class="choice-grid">
+    <a class="choice-card choice-light" href="wedding-invitation-light.html">
+      <div class="choice-icon">☀️</div>
+      <div class="choice-title">Ivory Light Theme</div>
+      <div class="choice-desc">Palace garden arch, soft roses, daylight swans &amp; envelope video</div>
+    </a>
+
+    <a class="choice-card choice-dark" href="wedding-invitation-dark.html">
+      <div class="choice-icon">🌙</div>
+      <div class="choice-title">Midnight Dark Theme</div>
+      <div class="choice-desc">Starry twilight arch, glowing lanterns, moonlit swans &amp; ring sparkle video</div>
+    </a>
+  </div>
+
+  <div class="feature-list">
+    <span>✉️ Interactive Video Unbox</span>
+    <span>•</span>
+    <span>🦢 Swan Lake Arch</span>
+    <span>•</span>
+    <span>💌 WhatsApp RSVP</span>
+  </div>
+</div>
+
+</body>
+</html>
