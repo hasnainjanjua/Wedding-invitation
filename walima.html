@@ -3,25 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Shazeb Asghar – Walima Wedding Ceremony Invitation</title>
-<meta name="description" content="Mr. & Mrs Asghar Abbas request the honour of your presence at the Walima Ceremony of their beloved son Shazeb Asghar with Daughter of Waqar Abbas.">
-<meta property="og:title" content="Shazeb Asghar – Walima Wedding Invitation">
-<meta property="og:description" content="Friday, 18th December 2026 at City Marriage Hall, Chakwal.">
+<title>Shazeb Asghar – Walima Reception Invitation</title>
+<meta name="description" content="Mr. & Mrs Asghar Abbas request the honour of your presence at the Walima Reception of their beloved son Shazeb Asghar with Daughter of Waqar Abbas.">
+<meta property="og:title" content="Shazeb Asghar – Walima Reception Invitation">
+<meta property="og:description" content="Walima: Friday, 18th December 2026 at City Marriage Hall, Chakwal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg-deep: #080305;
-  --bg-night: #12070a;
-  --card-dark: #190c10;
-  --card-dark-alt: #200f15;
+  --bg-deep: #060204;
+  --bg-night: #0f0508;
+  --card-dark: #18090e;
+  --card-dark-alt: #200c14;
   --gold: #f3ca85;
   --gold-bright: #ffe6b0;
   --gold-glow: rgba(243, 202, 133, 0.45);
-  --gold-border: rgba(243, 202, 133, 0.35);
-  --text-main: #fcf4ec;
-  --text-muted: #c9b1aa;
+  --gold-border: rgba(243, 202, 133, 0.38);
+  --text-main: #fff6ee;
+  --text-muted: #d4bfb8;
   --line-dark: rgba(243, 202, 133, 0.22);
   box-sizing: border-box;
 }
@@ -31,7 +31,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: #050203;
+  background: #040102;
   color: var(--text-main);
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 19px;
@@ -42,8 +42,13 @@ body {
 }
 
 .script {
-  font-family: 'Great Vibes', 'Brush Script MT', cursive;
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
   font-weight: 400;
+}
+
+.cinzel {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.08em;
 }
 
 .wrap {
@@ -52,79 +57,15 @@ body {
   margin: 0 auto;
   background: var(--bg-night);
   min-height: 100vh;
-  box-shadow: 0 0 70px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.95);
   overflow: hidden;
   border-left: 1px solid rgba(243, 202, 133, 0.15);
   border-right: 1px solid rgba(243, 202, 133, 0.15);
 }
 
-/* TOP BAR */
-.theme-switch-bar {
-  position: sticky;
-  top: 0;
-  z-index: 95;
-  background: rgba(18, 7, 10, 0.94);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line-dark);
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.version-badge {
-  font-weight: 600;
-  color: var(--gold-bright);
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.v-btn {
-  background: #261118;
-  border: 1px solid var(--line-dark);
-  color: var(--gold);
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 9.5px;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  transition: all 0.2s;
-}
-
-.v-btn.active {
-  background: var(--gold);
-  color: #1a080d;
-  font-weight: 600;
-  border-color: var(--gold);
-}
-
-.all-versions-btn {
-  background: #38121b;
-  border: 1px solid var(--gold-border);
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 14px;
-  font-size: 9.5px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-/* VIDEO UNBOXING OVERLAY */
+/* ===================================================
+   1. VIDEO UNBOXING OVERLAY
+   =================================================== */
 #videoUnboxOverlay {
   position: fixed;
   inset: 0;
@@ -150,10 +91,10 @@ body {
   position: relative;
   width: min(88vw, 360px);
   aspect-ratio: 9 / 16;
-  max-height: 82vh;
-  border-radius: 12px;
+  max-height: 84vh;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.9), 0 0 0 1px var(--gold-border), 0 0 35px rgba(243, 202, 133, 0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 0 1px var(--gold-border), 0 0 35px rgba(243, 202, 133, 0.2);
   cursor: pointer;
   background: #080305;
 }
@@ -173,7 +114,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(8, 3, 5, 0.45);
+  background: rgba(8, 3, 5, 0.42);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   transition: opacity 0.5s ease;
@@ -186,28 +127,30 @@ body {
 }
 
 .prompt-royal-seal {
-  width: 86px;
-  height: 86px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #56111b 0%, #29060b 60%, #150205 100%);
-  border: 1.5px solid var(--gold);
+  background: radial-gradient(circle at 35% 30%, #681421 0%, #35080f 60%, #1a0206 100%);
+  border: 1.8px solid var(--gold);
   box-shadow: 
-    0 10px 25px rgba(0, 0, 0, 0.85),
-    0 0 0 3px rgba(243, 202, 133, 0.3),
-    0 0 35px 12px var(--gold-glow),
+    0 12px 28px rgba(0, 0, 0, 0.85),
+    0 0 0 3px rgba(243, 202, 133, 0.35),
+    0 0 40px 14px var(--gold-glow),
     inset 0 2px 4px rgba(255, 230, 180, 0.4),
     inset 0 -5px 10px rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--gold-bright);
-  font-size: 32px;
+  font-size: 34px;
   animation: sealFloatDark 3s ease-in-out infinite;
   user-select: none;
 }
 
 .prompt-royal-seal span {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   background: linear-gradient(135deg, #fff7ea 10%, #f3ca85 60%, #c49449 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -221,7 +164,7 @@ body {
   font-size: 11px;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 20px var(--gold-glow);
   display: flex;
   flex-direction: column;
@@ -239,11 +182,11 @@ body {
 .video-flash-layer {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(255, 240, 210, 0.95) 0%, rgba(243, 202, 133, 0.7) 45%, transparent 100%);
+  background: radial-gradient(circle, rgba(255, 240, 210, 0.98) 0%, rgba(243, 202, 133, 0.75) 50%, transparent 100%);
   opacity: 0;
   pointer-events: none;
   z-index: 4;
-  transition: opacity 0.4s ease-out;
+  transition: opacity 0.45s ease-out;
 }
 
 .video-flash-layer.flashing { opacity: 1; }
@@ -251,11 +194,11 @@ body {
 @keyframes sealFloatDark {
   0%, 100% {
     transform: translateY(0) scale(1);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.85), 0 0 0 3px rgba(243,202,133,0.3), 0 0 30px 10px var(--gold-glow);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.85), 0 0 0 3px rgba(243,202,133,0.35), 0 0 30px 10px var(--gold-glow);
   }
   50% {
-    transform: translateY(-4px) scale(1.04);
-    box-shadow: 0 14px 32px rgba(0,0,0,0.95), 0 0 0 5px rgba(255,235,190,0.5), 0 0 45px 18px rgba(243,202,133,0.7);
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 16px 34px rgba(0,0,0,0.95), 0 0 0 5px rgba(255,235,190,0.55), 0 0 45px 18px rgba(243,202,133,0.7);
   }
 }
 
@@ -264,13 +207,15 @@ body {
   50% { opacity: 1; transform: scale(1.02); }
 }
 
-/* HERO SECTION */
+/* ===================================================
+   2. HERO PALATIAL ARCH SECTION
+   =================================================== */
 .hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 640px;
-  max-height: 940px;
+  min-height: 660px;
+  max-height: 960px;
   background-color: #0b0406;
   background-image: url('assets/hero-arch-swans-dark.jpg');
   background-size: cover;
@@ -287,7 +232,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 36%, rgba(24, 9, 13, 0.25) 0%, rgba(12, 4, 6, 0.4) 60%, rgba(5, 2, 3, 0.75) 100%);
+  background: radial-gradient(circle at 50% 36%, rgba(24, 9, 13, 0.22) 0%, rgba(12, 4, 6, 0.42) 60%, rgba(5, 2, 3, 0.78) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -300,32 +245,32 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 400px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 18px rgba(0, 0, 0, 0.8);
+  max-width: 420px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.85);
 }
 
 .hero-sub {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 9.5px;
-  letter-spacing: 0.26em;
+  font-family: 'Cinzel', serif;
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold-bright);
-  margin-bottom: 6px;
-  font-weight: 500;
-  text-shadow: 0 0 10px rgba(243, 202, 133, 0.4);
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-shadow: 0 0 12px rgba(243, 202, 133, 0.5);
 }
 
 .hero-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(38px, 9.5vw, 52px);
+  font-family: 'Alex Brush', cursive;
+  font-size: clamp(38px, 9.5vw, 54px);
   line-height: 1.1;
   color: #fff4e4;
   margin-bottom: 2px;
 }
 
 .hero-date {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 21px;
+  font-family: 'Cinzel', serif;
+  font-size: 19px;
   letter-spacing: 0.24em;
   color: var(--gold);
   font-weight: 600;
@@ -338,7 +283,7 @@ body {
   justify-content: center;
   gap: 12px;
   width: 140px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 .hero-divider::before, .hero-divider::after {
   content: "";
@@ -348,12 +293,12 @@ body {
 }
 .hero-divider span {
   color: var(--gold-bright);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .hero-names {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(48px, 12vw, 68px);
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+  font-size: clamp(52px, 13vw, 74px);
   line-height: 1.05;
   color: #fff8ef;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 25px rgba(243, 202, 133, 0.5);
@@ -363,7 +308,7 @@ body {
   display: block;
   font-size: clamp(24px, 6vw, 32px);
   color: var(--gold);
-  margin: -2px 0;
+  margin: -4px 0 -2px;
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
   font-weight: 400;
@@ -372,17 +317,18 @@ body {
 .hero-names .bride-title {
   display: block;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(23px, 5.5vw, 29px);
+  font-size: clamp(24px, 5.8vw, 31px);
   font-style: italic;
-  color: #fff1e0;
+  color: #fff2e2;
   letter-spacing: 0.04em;
   margin-top: 4px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
 }
 
 .hero-scroll {
   position: relative;
   z-index: 2;
-  margin-bottom: 23%;
+  margin-bottom: 22%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -394,15 +340,15 @@ body {
 
 .hero-scroll .scroll-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 9px;
+  font-size: 9.5px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  font-weight: 500;
-  opacity: 0.9;
+  font-weight: 600;
+  opacity: 0.92;
 }
 
 .hero-scroll .scroll-arrow {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--gold);
   animation: bounceDown 2s infinite ease-in-out;
 }
@@ -412,7 +358,9 @@ body {
   50% { transform: translateY(6px); }
 }
 
-/* FLOATING PARTICLES */
+/* ===================================================
+   3. FLOATING PETALS & SPARKLES
+   =================================================== */
 .petal-canvas {
   position: absolute;
   inset: 0;
@@ -427,9 +375,22 @@ body {
   background: radial-gradient(circle at 30% 30%, #fff9ec 0%, #f3ca85 55%, #b58038 100%);
   border-radius: 50%;
   opacity: 0;
-  box-shadow: 0 0 10px rgba(243, 202, 133, 0.8);
+  box-shadow: 0 0 10px rgba(243, 202, 133, 0.85);
   pointer-events: none;
   animation: particleFall linear infinite;
+}
+
+.rose-petal {
+  position: absolute;
+  top: -24px;
+  width: 14px;
+  height: 18px;
+  background: radial-gradient(circle at 40% 35%, #e8a5ac 0%, #a83d4e 60%, #56111b 100%);
+  border-radius: 80% 20% 75% 25%;
+  opacity: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  pointer-events: none;
+  animation: petalDrift linear infinite;
 }
 
 @keyframes particleFall {
@@ -439,26 +400,59 @@ body {
   100% { opacity: 0; transform: translateY(105vh) translateX(var(--drift-x, 30px)) scale(1.1); }
 }
 
-/* SECTIONS */
+@keyframes petalDrift {
+  0% { opacity: 0; transform: translateY(0) rotate(0deg) scale(0.6); }
+  15% { opacity: 0.85; }
+  85% { opacity: 0.75; }
+  100% { opacity: 0; transform: translateY(105vh) translateX(var(--drift-x, 45px)) rotate(360deg) scale(1); }
+}
+
+/* ===================================================
+   4. SCROLL-TRIGGERED SECTION ENTRANCES
+   =================================================== */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(32px) scale(0.98);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 section {
   position: relative;
-  padding: 55px 24px;
+  padding: 58px 24px;
   border-bottom: 1px solid var(--line-dark);
   background: var(--bg-night);
 }
 
+/* FLORAL CORNERS ON SECTION CARDS */
 .section-arch-frame {
   position: relative;
-  padding: 38px 20px 34px;
+  padding: 42px 22px 36px;
   border: 1px solid var(--gold-border);
-  border-radius: 50% 50% 8px 8px / 12% 12% 8px 8px;
-  background: linear-gradient(180deg, rgba(32, 14, 20, 0.75) 0%, rgba(20, 8, 12, 0.9) 100%);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 0 35px rgba(243, 202, 133, 0.05);
+  border-radius: 50% 50% 10px 10px / 12% 12% 10px 10px;
+  background: linear-gradient(180deg, rgba(32, 14, 20, 0.78) 0%, rgba(20, 8, 12, 0.92) 100%);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55), inset 0 0 35px rgba(243, 202, 133, 0.05);
 }
+
+/* BESPOKE GOLD FLORAL CORNERS */
+.floral-corner-tl, .floral-corner-tr {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  pointer-events: none;
+  opacity: 0.75;
+}
+.floral-corner-tl { top: 8px; left: 8px; }
+.floral-corner-tr { top: 8px; right: 8px; transform: scaleX(-1); }
 
 .arabic-header {
   font-family: 'Amiri', 'Traditional Arabic', serif;
-  font-size: 32px;
+  font-size: 34px;
   line-height: 1.4;
   color: var(--gold-bright);
   margin-bottom: 14px;
@@ -466,68 +460,69 @@ section {
 }
 
 .durood-line {
-  font-size: 19px;
+  font-size: 20px;
   font-style: italic;
   color: var(--gold-bright);
   margin-bottom: 16px;
 }
 
 .hosts-intro {
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.6;
   color: var(--text-main);
   margin-bottom: 14px;
 }
 
 .couple-showcase {
-  margin: 20px 0;
+  margin: 22px 0;
 }
 
 .groom-name {
-  font-family: 'Great Vibes', cursive;
-  font-size: 46px;
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+  font-size: 52px;
   color: var(--gold-bright);
   line-height: 1.1;
-  text-shadow: 0 0 15px rgba(243, 202, 133, 0.4);
+  text-shadow: 0 0 18px rgba(243, 202, 133, 0.45);
 }
 
 .with-word {
   font-style: italic;
   font-size: 22px;
   color: var(--gold);
-  margin: 2px 0;
+  margin: 3px 0;
 }
 
 .bride-name {
-  font-size: 25px;
+  font-size: 27px;
   font-style: italic;
   color: #fff3e2;
   letter-spacing: 0.03em;
+  font-weight: 500;
 }
 
 .programme-tag {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
+  font-family: 'Cinzel', serif;
+  font-size: 11.5px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
   margin-top: 18px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h2 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Alex Brush', cursive;
   font-weight: 400;
-  font-size: 42px;
+  font-size: 46px;
   line-height: 1.15;
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   color: var(--gold);
-  text-shadow: 0 0 12px rgba(243, 202, 133, 0.3);
+  text-shadow: 0 0 14px rgba(243, 202, 133, 0.35);
 }
 
 .flourish-icon {
   display: block;
-  margin: 6px auto 18px;
+  margin: 4px auto 18px;
   color: var(--gold-bright);
   font-size: 18px;
 }
@@ -535,11 +530,13 @@ h2 {
 p {
   margin: 0 0 14px;
   color: var(--text-muted);
-  font-size: 18.5px;
+  font-size: 19px;
   line-height: 1.6;
 }
 
-/* COUNTDOWN */
+/* ===================================================
+   5. COUNTDOWN PILLS
+   =================================================== */
 .countdown-box {
   display: flex;
   justify-content: center;
@@ -548,35 +545,37 @@ p {
 }
 
 .countdown-box .cd-pill {
-  min-width: 66px;
+  min-width: 68px;
   padding: 12px 4px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #250f16;
   border: 1px solid var(--gold-border);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 15px rgba(243, 202, 133, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.55), 0 0 15px rgba(243, 202, 133, 0.12);
 }
 
 .countdown-box b {
   display: block;
   font-size: 34px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--gold-bright);
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cinzel', serif;
 }
 
 .countdown-box small {
   display: block;
-  margin-top: 5px;
-  font-size: 9px;
-  letter-spacing: 0.15em;
+  margin-top: 6px;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
-/* EVENT CARDS */
+/* ===================================================
+   6. EVENT CARDS
+   =================================================== */
 .events-container {
   display: flex;
   flex-direction: column;
@@ -588,10 +587,11 @@ p {
   position: relative;
   background: linear-gradient(145deg, #1f0b12 0%, #15060a 100%);
   border: 1px solid var(--gold-border);
-  border-radius: 8px;
-  padding: 24px 18px;
+  border-radius: 10px;
+  padding: 26px 20px;
   text-align: left;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 .event-card-header {
@@ -604,46 +604,46 @@ p {
 }
 
 .event-card-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 38px;
+  font-family: 'Alex Brush', cursive;
+  font-size: 44px;
   color: var(--gold-bright);
   line-height: 1;
 }
 
 .event-card-date {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.14em;
+  font-family: 'Cinzel', serif;
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .event-time-row {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .event-time-badge {
-  background: rgba(243, 202, 133, 0.15);
+  background: rgba(243, 202, 133, 0.16);
   border: 1px solid var(--gold-border);
   color: var(--gold-bright);
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  padding: 4px 10px;
+  font-size: 11.5px;
+  padding: 5px 12px;
   border-radius: 4px;
   font-weight: 600;
   letter-spacing: 0.05em;
-  min-width: 90px;
+  min-width: 95px;
   text-align: center;
 }
 
 .event-time-label {
   color: var(--text-main);
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: 600;
 }
 
 .event-venue-box {
@@ -653,7 +653,7 @@ p {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 17px;
+  font-size: 17.5px;
   color: var(--text-muted);
 }
 
@@ -669,41 +669,44 @@ p {
   padding: 14px 16px;
   border-left: 3px solid var(--gold);
   background: rgba(243, 202, 133, 0.08);
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 6px 6px 0;
   text-align: left;
-  font-size: 16px;
+  font-size: 16.5px;
   color: #eed6c9;
   font-style: italic;
 }
 
-/* VENUE CARD */
+/* ===================================================
+   7. VENUE CARDS & MAPS
+   =================================================== */
 .venue-section-card {
   background: #190a0f;
   border: 1px solid var(--gold-border);
-  border-radius: 8px;
-  padding: 22px 16px;
+  border-radius: 10px;
+  padding: 24px 18px;
+  margin-bottom: 22px;
   text-align: left;
 }
 
 .venue-section-title {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 600;
   color: var(--gold-bright);
   margin-bottom: 4px;
 }
 
 .venue-section-addr {
-  font-size: 17px;
+  font-size: 17.5px;
   color: var(--text-muted);
   margin-bottom: 12px;
 }
 
 .map-embed {
   width: 100%;
-  height: 220px;
+  height: 200px;
   border: 1px solid var(--gold-border);
-  border-radius: 4px;
-  margin-bottom: 12px;
+  border-radius: 6px;
+  margin-bottom: 14px;
   filter: invert(90%) hue-rotate(180deg) contrast(90%);
 }
 
@@ -712,17 +715,17 @@ p {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 11px 22px;
+  padding: 12px 24px;
   border: 1px solid var(--gold);
   border-radius: 4px;
   color: var(--gold-bright);
   background: #230d14;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Cinzel', serif;
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -741,7 +744,152 @@ p {
   font-weight: 700;
 }
 
-/* CONTACTS SECTION */
+/* ===================================================
+   8. 1-TAP INTERACTIVE RSVP SYSTEM
+   =================================================== */
+.tap-rsvp-box {
+  background: linear-gradient(145deg, #200c14 0%, #15060a 100%);
+  border: 1px solid var(--gold-border);
+  border-radius: 12px;
+  padding: 26px 20px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+}
+
+.tap-field-title {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.tap-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.tap-opt-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #18080d;
+  border: 1px solid var(--gold-border);
+  color: #eed6c9;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: left;
+}
+
+.tap-opt-btn:hover {
+  border-color: var(--gold);
+  background: #250f16;
+}
+
+.tap-opt-btn.active {
+  background: rgba(243, 202, 133, 0.18);
+  border-color: var(--gold);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 14px rgba(243, 202, 133, 0.2);
+}
+
+.tap-opt-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.tap-opt-btn.active .tap-opt-radio {
+  border-color: var(--gold);
+  background: var(--gold);
+}
+
+.tap-opt-btn.active .tap-opt-radio::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #140508;
+}
+
+/* GUEST PILLS */
+.guest-pills-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.guest-pill-btn {
+  flex: 1;
+  padding: 10px 4px;
+  border-radius: 6px;
+  background: #18080d;
+  border: 1px solid var(--gold-border);
+  color: var(--gold-bright);
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.guest-pill-btn:hover {
+  border-color: var(--gold);
+  background: #250f16;
+}
+
+.guest-pill-btn.active {
+  background: var(--gold);
+  color: #140508;
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(243, 202, 133, 0.4);
+}
+
+.guest-name-field {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--gold-border);
+  border-radius: 6px;
+  background: #18080d;
+  color: #fff6ee;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.guest-name-field:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(243, 202, 133, 0.25);
+}
+
+.tap-submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+/* ===================================================
+   9. CONTACTS & CALL/CHAT HUB
+   =================================================== */
 .contacts-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -756,13 +904,13 @@ p {
 .contact-card {
   background: #1b0c11;
   border: 1px solid var(--gold-border);
-  border-radius: 6px;
-  padding: 16px 12px;
+  border-radius: 8px;
+  padding: 18px 14px;
   text-align: center;
 }
 
 .contact-name {
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 600;
   color: var(--gold-bright);
   margin-bottom: 4px;
@@ -770,10 +918,10 @@ p {
 
 .contact-phone {
   font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   color: #fff;
   letter-spacing: 0.05em;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .contact-btn-row {
@@ -784,19 +932,20 @@ p {
 
 .contact-mini-btn {
   flex: 1;
-  padding: 6px 8px;
+  padding: 8px 10px;
   background: #2b1118;
   border: 1px solid var(--gold-border);
   color: var(--gold-bright);
   text-decoration: none;
   border-radius: 4px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
+  transition: all 0.2s;
 }
 
 .contact-mini-btn:hover {
@@ -804,34 +953,9 @@ p {
   color: #120508;
 }
 
-/* RSVP FORM */
-form {
-  display: grid;
-  gap: 14px;
-  text-align: left;
-  margin-top: 22px;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 13px 16px;
-  border: 1px solid var(--gold-border);
-  border-radius: 4px;
-  background: #1f0b12;
-  color: #fff6ee;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 18px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(243, 202, 133, 0.25);
-  background: #280f17;
-}
-
-/* MUSIC BUTTON */
+/* ===================================================
+   10. FLOATING MUSIC CONTROLLER
+   =================================================== */
 .music-btn {
   position: fixed;
   right: 20px;
@@ -871,25 +995,32 @@ input:focus, select:focus, textarea:focus {
 </head>
 <body>
 
-<!-- TOP NAVIGATION BAR -->
-<div class="theme-switch-bar">
-  <div class="version-badge">👑 Royal Wedding Invitation</div>
-  <div class="nav-actions">
-    <button class="v-btn" id="vEnvBtn" type="button" title="Use Envelope video">✉️ Envelope</button>
-    <button class="v-btn active" id="vRingBtn" type="button" title="Use Ring video">💍 Ring</button>
-  </div>
-</div>
+<!-- SVG FLORAL CORNER TEMPLATE (REUSABLE INLINE) -->
+<svg style="display:none;">
+  <symbol id="floral-corner" viewBox="0 0 100 100">
+    <path d="M10,90 Q15,40 45,25 Q70,15 95,10" fill="none" stroke="#f3ca85" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M45,25 Q35,10 20,15 Q15,30 35,32" fill="#d49b50" opacity="0.6"/>
+    <path d="M60,20 Q65,5 80,8 Q82,22 68,26" fill="#d49b50" opacity="0.6"/>
+    <circle cx="28" cy="22" r="6" fill="#ffe6b0"/>
+    <circle cx="28" cy="22" r="9" fill="none" stroke="#f3ca85" stroke-width="1"/>
+    <circle cx="70" cy="16" r="5" fill="#ffe6b0"/>
+    <circle cx="15" cy="50" r="4" fill="#f3ca85"/>
+  </symbol>
+</svg>
 
-<!-- VIDEO UNBOXING OVERLAY -->
+<!-- ===================================================
+     1. VIDEO UNBOXING OVERLAY
+     =================================================== -->
 <div id="videoUnboxOverlay" role="dialog" aria-modal="true" aria-label="Interactive wedding invitation reveal">
   <div class="video-frame-box" id="videoBox">
     <video id="unboxVideo" playsinline webkit-playsinline muted preload="auto">
       <source id="videoSrc" src="assets/ring.mp4" type="video/mp4">
     </video>
 
+    <!-- Tap to Open Prompt -->
     <div class="video-prompt-layer" id="videoPrompt">
       <div class="prompt-royal-seal">
-        <span class="script">SA</span>
+        <span>SA</span>
       </div>
       <div class="prompt-cta">
         <span>Tap to Open Invitation</span>
@@ -897,21 +1028,24 @@ input:focus, select:focus, textarea:focus {
       </div>
     </div>
 
+    <!-- Golden flash transition on reveal -->
     <div class="video-flash-layer" id="videoFlash"></div>
   </div>
 </div>
 
-<!-- MAIN INVITATION WEBPAGE -->
+<!-- ===================================================
+     2. MAIN INVITATION WEBPAGE
+     =================================================== -->
 <div class="wrap">
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION: PALACE ARCH & MOONLIT SWANS -->
   <section class="hero-section" id="heroSec">
     <div class="hero-overlay"></div>
     <div class="petal-canvas" id="petalCanvas"></div>
 
     <div class="hero-content">
       <div class="hero-sub">With the blessings of Mohammed O Aly’ Mohammed</div>
-      <div class="hero-title">Walima Ceremony</div>
+      <div class="hero-title">Walima Reception</div>
       <div class="hero-date">Friday, 18 December 2026</div>
       <div class="hero-divider"><span>❦</span></div>
       
@@ -929,14 +1063,17 @@ input:focus, select:focus, textarea:focus {
   </section>
 
   <!-- SECTION 2: BISMILLAH & FAMILY INVITATION -->
-  <section>
+  <section class="scroll-reveal">
     <div class="section-arch-frame">
+      <svg class="floral-corner-tl"><use href="#floral-corner"/></svg>
+      <svg class="floral-corner-tr"><use href="#floral-corner"/></svg>
+
       <div class="arabic-header">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
       <div class="durood-line">With the blessings of Mohammed O Aly’ Mohammed,</div>
       
       <div class="hosts-intro">
         <strong>Mr. &amp; Mrs Asghar Abbas</strong><br>
-        request the honour of your presence at the Wedding Ceremony of their beloved Son,
+        request the honour of your presence at the Walima Reception of their beloved Son,
       </div>
 
       <div class="couple-showcase">
@@ -947,7 +1084,7 @@ input:focus, select:focus, textarea:focus {
 
       <div class="programme-tag">Programme Insha’ Allah</div>
       
-      <h2 style="margin-top: 36px; font-size: 38px;">The Walima Ceremony Begins In</h2>
+      <h2 style="margin-top: 36px;">Walima Reception Begins In</h2>
       <div class="countdown-box" id="cd"></div>
       
       <div style="margin-top: 26px;">
@@ -956,15 +1093,19 @@ input:focus, select:focus, textarea:focus {
     </div>
   </section>
 
-  <!-- SECTION 3: WALIMA PROGRAMME -->
-  <section>
-    <h2>Programme of Event</h2>
+  <!-- SECTION 3: PROGRAMME OF WALIMA -->
+  <section class="scroll-reveal">
+    <h2>Programme of Events</h2>
     <span class="flourish-icon">✿</span>
     
     <div class="events-container">
+      <!-- WALIMA ONLY -->
       <div class="event-card">
+        <svg class="floral-corner-tl"><use href="#floral-corner"/></svg>
+        <svg class="floral-corner-tr"><use href="#floral-corner"/></svg>
+
         <div class="event-card-header">
-          <div class="event-card-title">Walima Reception</div>
+          <div class="event-card-title">Walima</div>
           <div class="event-card-date">Friday, 18th Dec 2026</div>
         </div>
         
@@ -986,28 +1127,28 @@ input:focus, select:focus, textarea:focus {
     </div>
   </section>
 
-  <!-- SECTION 4: VENUE & DIRECTIONS -->
-  <section>
-    <h2>The Venue</h2>
+  <!-- SECTION 4: VENUE & DIRECTIONS (ONLY CITY MARRIAGE HALL) -->
+  <section class="scroll-reveal">
+    <h2>Reception Venue</h2>
     <span class="flourish-icon">❦</span>
 
-    <div class="venue-section-card">
-      <div style="font-size: 36px; margin-bottom: 6px;">🕌</div>
+    <div class="venue-section-card" style="margin-bottom: 0;">
+      <div style="font-size: 32px; margin-bottom: 6px;">🕌</div>
       <div class="venue-section-title">City Marriage Hall, Chakwal</div>
       <div class="venue-section-addr">Chakwal, Punjab, Pakistan</div>
-      <p style="font-size: 15px; color: var(--gold); margin-bottom: 12px;">★ Venue for Walima Reception</p>
+      <p style="font-size: 15.5px; color: var(--gold); margin-bottom: 12px; font-weight: 600;">★ Venue for Walima (Friday, 18th December 2026)</p>
       <iframe class="map-embed" src="https://www.google.com/maps?q=City+Marriage+Hall+Chakwal+Pakistan&output=embed" loading="lazy" title="City Marriage Hall Chakwal Map"></iframe>
-      <a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=City+Marriage+Hall+Chakwal+Pakistan" target="_blank" rel="noopener">📍 Get Directions to Venue</a>
+      <a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=City+Marriage+Hall+Chakwal+Pakistan" target="_blank" rel="noopener">📍 Get Directions to City Marriage Hall</a>
     </div>
   </section>
 
   <!-- SECTION 5: CONTACTS & LOOKING FORWARD -->
-  <section>
+  <section class="scroll-reveal">
     <h2>Looking Forward</h2>
     <span class="flourish-icon">✿</span>
-    <p style="font-size: 24px; color: var(--gold-bright); font-style: italic; margin-bottom: 24px;">All Family Members</p>
+    <p style="font-size: 26px; color: var(--gold-bright); font-style: italic; margin-bottom: 24px;">All Family Members</p>
     
-    <div style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 600;">Contact For Inquiries</div>
+    <div style="font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 700;">Direct Contact For Inquiries</div>
     <div class="contacts-grid">
       <div class="contact-card">
         <div class="contact-name">Asghar Abbas</div>
@@ -1029,36 +1170,58 @@ input:focus, select:focus, textarea:focus {
     </div>
   </section>
 
-  <!-- SECTION 6: CONFIRM ATTENDANCE (RSVP) -->
-  <section>
+  <!-- SECTION 6: 1-TAP INTERACTIVE RSVP -->
+  <section class="scroll-reveal">
     <h2>Confirm Your Attendance</h2>
     <span class="flourish-icon">❦</span>
-    <p>To help us prepare for a joyful gathering, kindly let us know if you will be joining us for the Walima.</p>
+    <p>To help us prepare for an exquisite evening, kindly tap your attendance below.</p>
     
-    <form id="rsvp">
-      <input name="n" placeholder="Your Full Name" aria-label="Your Full Name" required>
-      <select name="ev" aria-label="Attending Status">
-        <option value="Joyfully Accepts (Walima)">Joyfully accepts with pleasure</option>
-        <option value="Regretfully Declines">Regretfully declines with love</option>
-      </select>
-      <input name="g" type="number" min="1" max="10" placeholder="Number of Guests" aria-label="Number of Guests" value="1">
-      <textarea name="m" rows="2" placeholder="Heartfelt wishes or prayer for the couple (optional)" aria-label="Message for the couple"></textarea>
-      <button class="btn solid" type="submit">💌 Send RSVP via WhatsApp</button>
-    </form>
+    <div class="tap-rsvp-box">
+      <!-- 1. ATTENDANCE OPTION -->
+      <div class="tap-field-title">Will you be joining us?</div>
+      <div class="tap-options-grid" id="rsvpStatusGroup">
+        <button type="button" class="tap-opt-btn active" data-val="Attending Walima Reception">
+          <span class="tap-opt-radio"></span>
+          <span>💐 Attending Walima Reception (18 Dec)</span>
+        </button>
+        <button type="button" class="tap-opt-btn" data-val="Regretfully Declines">
+          <span class="tap-opt-radio"></span>
+          <span>🤍 Regretfully Declines with Love</span>
+        </button>
+      </div>
+
+      <!-- 2. GUEST COUNT -->
+      <div class="tap-field-title">Number of Guests</div>
+      <div class="guest-pills-row" id="guestPillsGroup">
+        <button type="button" class="guest-pill-btn" data-guests="1">1</button>
+        <button type="button" class="guest-pill-btn active" data-guests="2">2</button>
+        <button type="button" class="guest-pill-btn" data-guests="3">3</button>
+        <button type="button" class="guest-pill-btn" data-guests="4">4</button>
+        <button type="button" class="guest-pill-btn" data-guests="5+">5+</button>
+      </div>
+
+      <!-- 3. OPTIONAL NAME -->
+      <div class="tap-field-title">Your Name (Optional)</div>
+      <input type="text" class="guest-name-field" id="rsvpGuestName" placeholder="Enter your name" aria-label="Your Name">
+
+      <!-- 4. 1-TAP WHATSAPP BUTTON -->
+      <button type="button" class="btn solid tap-submit-btn" id="sendRsvpWhatsAppBtn">
+        💌 Tap to Send RSVP via WhatsApp
+      </button>
+    </div>
   </section>
 
   <!-- SECTION 7: FOOTER -->
-  <section style="padding: 44px 24px 60px; border-bottom: 0;">
+  <section class="scroll-reveal" style="padding: 44px 24px 60px; border-bottom: 0;">
     <h2>With Love &amp; Prayers</h2>
-    <p class="script" style="font-size: 36px; color: var(--gold-bright); margin-top: 10px;">Shazeb Asghar &amp; Family</p>
-    <p style="font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-top: 8px;">See you in Chakwal</p>
+    <p class="script" style="font-size: 38px; color: var(--gold-bright); margin-top: 10px;">Shazeb Asghar &amp; Family</p>
+    <p style="font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-top: 8px;">See you in Chakwal</p>
   </section>
 
 </div>
 
 <!-- MUSIC CONTROLLER -->
 <button class="music-btn" id="mus" aria-label="Toggle background music" title="Toggle music">♪</button>
-<audio id="aud" loop preload="auto"></audio>
 
 <script>
 // ==========================================
@@ -1067,21 +1230,21 @@ input:focus, select:focus, textarea:focus {
 const C = {
   groom: "Shazeb Asghar",
   bride: "Daughter of Waqar Abbas",
-  countdownDate: "2026-12-18T19:00:00+05:00", // Walima (18 Dec 7:00 PM)
+  countdownDate: "2026-12-18T19:00:00+05:00", // Walima Dinner
   whatsapp: "923345781214", // Asghar Abbas
-  audio: "",
   video: "assets/ring.mp4"
 };
 
 const $ = id => document.getElementById(id);
-const aud = $('aud');
 const mus = $('mus');
 const video = $('unboxVideo');
 const overlay = $('videoUnboxOverlay');
 const promptLayer = $('videoPrompt');
 const flash = $('videoFlash');
 
-// Countdown
+// ==========================================
+// COUNTDOWN
+// ==========================================
 function tickCountdown() {
   const diff = Math.max(0, new Date(C.countdownDate) - new Date());
   const totalSecs = Math.floor(diff / 1000);
@@ -1100,13 +1263,150 @@ setInterval(tickCountdown, 1000);
 // Add to Calendar
 $('addToCalBtn').onclick = () => {
   const title = encodeURIComponent("Shazeb Asghar – Walima Reception");
-  const details = encodeURIComponent("Walima Reception of Shazeb Asghar with Daughter of Waqar Abbas.\n\nFriday 18th December 2026\nDinner: 7:00 PM - 9:00 PM\nVenue: City Marriage Hall, Chakwal.");
+  const details = encodeURIComponent("Walima Reception of Shazeb Asghar with Daughter of Waqar Abbas.\n\nFriday 18 Dec: Dinner at City Marriage Hall, Chakwal (7:00 – 9:00 PM).");
   const location = encodeURIComponent("City Marriage Hall, Chakwal, Punjab, Pakistan");
   window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=20261218T140000Z/20261218T170000Z`, '_blank');
 };
 
 // ==========================================
-// VIDEO PLAY AS ANIMATION & REVEAL
+// DUAL AUDIO ENGINE: REVEAL SFX + WEDDING MUSIC
+// ==========================================
+let audioCtx = null;
+let musicPlaying = false;
+let ambientGainNode = null;
+
+function initAudioContext() {
+  if (!audioCtx) {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    audioCtx = new AudioContext();
+  }
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+}
+
+// 1. Magical Crystalline Reveal Chime & Swoosh
+function playRevealSound() {
+  try {
+    initAudioContext();
+    const now = audioCtx.currentTime;
+    
+    // Harmonious shimmering chime arpeggio: C5, E5, G5, B5, C6, E6
+    const freqs = [523.25, 659.25, 783.99, 987.77, 1046.50, 1318.51];
+    freqs.forEach((f, idx) => {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(f, now + idx * 0.08);
+      
+      gain.gain.setValueAtTime(0.001, now + idx * 0.08);
+      gain.gain.exponentialRampToValueAtTime(0.18, now + idx * 0.08 + 0.04);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.08 + 1.8);
+      
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      
+      osc.start(now + idx * 0.08);
+      osc.stop(now + idx * 0.08 + 2.0);
+    });
+
+    // Warm golden swoosh
+    const bufferSize = audioCtx.sampleRate * 1.5;
+    const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+    const output = noiseBuffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+      output[i] = Math.random() * 2 - 1;
+    }
+    const whiteNoise = audioCtx.createBufferSource();
+    whiteNoise.buffer = noiseBuffer;
+    
+    const filter = audioCtx.createBiquadFilter();
+    filter.type = 'bandpass';
+    filter.frequency.setValueAtTime(400, now);
+    filter.frequency.exponentialRampToValueAtTime(1400, now + 0.6);
+    filter.frequency.exponentialRampToValueAtTime(300, now + 1.4);
+    filter.Q.setValueAtTime(3, now);
+    
+    const noiseGain = audioCtx.createGain();
+    noiseGain.gain.setValueAtTime(0.001, now);
+    noiseGain.gain.linearRampToValueAtTime(0.08, now + 0.4);
+    noiseGain.gain.exponentialRampToValueAtTime(0.0001, now + 1.4);
+    
+    whiteNoise.connect(filter);
+    filter.connect(noiseGain);
+    noiseGain.connect(audioCtx.destination);
+    
+    whiteNoise.start(now);
+    whiteNoise.stop(now + 1.5);
+  } catch (e) {}
+}
+
+// 2. Soft Ambient Wedding Low Tune (Acoustic strings / gentle harp progression)
+function startWeddingMusic() {
+  if (musicPlaying) return;
+  try {
+    initAudioContext();
+    musicPlaying = true;
+    mus.classList.add('playing');
+    mus.textContent = '❚❚';
+
+    ambientGainNode = audioCtx.createGain();
+    ambientGainNode.gain.setValueAtTime(0.001, audioCtx.currentTime);
+    ambientGainNode.gain.linearRampToValueAtTime(0.065, audioCtx.currentTime + 2.5);
+    ambientGainNode.connect(audioCtx.destination);
+
+    // Warm royal drone chords & gentle arpeggio (F Major - C Major - D Minor - Bb Major)
+    const baseFreqs = [174.61, 220.00, 261.63, 329.63, 392.00, 440.00, 523.25];
+    let noteIndex = 0;
+
+    function playNextAmbientNote() {
+      if (!musicPlaying) return;
+      const noteOsc = audioCtx.createOscillator();
+      const noteGain = audioCtx.createGain();
+      
+      const freq = baseFreqs[noteIndex % baseFreqs.length];
+      noteIndex++;
+      
+      noteOsc.type = 'triangle';
+      noteOsc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      
+      noteGain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+      noteGain.gain.linearRampToValueAtTime(0.07, audioCtx.currentTime + 0.4);
+      noteGain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 3.2);
+      
+      noteOsc.connect(noteGain);
+      noteGain.connect(ambientGainNode);
+      
+      noteOsc.start();
+      noteOsc.stop(audioCtx.currentTime + 3.5);
+      
+      const nextTime = 900 + Math.random() * 600;
+      setTimeout(playNextAmbientNote, nextTime);
+    }
+    playNextAmbientNote();
+  } catch(e) {}
+}
+
+function stopWeddingMusic() {
+  musicPlaying = false;
+  mus.classList.remove('playing');
+  mus.textContent = '♪';
+  if (ambientGainNode && audioCtx) {
+    ambientGainNode.gain.linearRampToValueAtTime(0.0001, audioCtx.currentTime + 0.5);
+  }
+}
+
+mus.onclick = () => {
+  if (musicPlaying) {
+    stopWeddingMusic();
+  } else {
+    startWeddingMusic();
+  }
+};
+
+// ==========================================
+// VIDEO UNBOXING & REVEAL
 // ==========================================
 let hasStarted = false;
 let hasRevealed = false;
@@ -1115,25 +1415,22 @@ function revealInvitation() {
   if (hasRevealed) return;
   hasRevealed = true;
   
+  playRevealSound();
   flash.classList.add('flashing');
+  
   setTimeout(() => {
     overlay.classList.add('revealed');
     document.body.style.overflow = '';
+    setTimeout(startWeddingMusic, 1200);
   }, 350);
-
-  if (C.audio) {
-    aud.src = C.audio;
-    aud.play().then(() => {
-      mus.classList.add('playing');
-      mus.textContent = '❚❚';
-    }).catch(() => {});
-  }
 }
 
 function handleVideoClick() {
   if (!hasStarted) {
     hasStarted = true;
     promptLayer.classList.add('hiding');
+    initAudioContext();
+    
     video.currentTime = 0;
     const playPromise = video.play();
     if (playPromise !== undefined) {
@@ -1155,37 +1452,31 @@ video.addEventListener('ended', revealInvitation);
 
 document.body.style.overflow = 'hidden';
 
-// Switch videos in top bar
-$('vEnvBtn').onclick = () => {
-  $('vEnvBtn').classList.add('active');
-  $('vRingBtn').classList.remove('active');
-  video.pause();
-  video.src = 'assets/envelope.mp4';
-  video.load();
-  hasStarted = false;
-  promptLayer.classList.remove('hiding');
-};
-
-$('vRingBtn').onclick = () => {
-  $('vRingBtn').classList.add('active');
-  $('vEnvBtn').classList.remove('active');
-  video.pause();
-  video.src = 'assets/ring.mp4';
-  video.load();
-  hasStarted = false;
-  promptLayer.classList.remove('hiding');
-};
-
 // Scroll down button
 $('scrollBtn').onclick = () => {
   window.scrollBy({ top: window.innerHeight * 0.85, behavior: 'smooth' });
 };
 
-// Sparkles
-function spawnHeroSparkles() {
+// ==========================================
+// SCROLL-TRIGGERED ENTRANCE ANIMATIONS
+// ==========================================
+const scrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.scroll-reveal').forEach(el => scrollObserver.observe(el));
+
+// Ambient Particles & Drifting Rose Petals
+function spawnAmbientFlora() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const canvas = $('petalCanvas');
-  for (let i = 0; i < 20; i++) {
+  
+  // Golden Sparkles
+  for (let i = 0; i < 18; i++) {
     const p = document.createElement('div');
     p.className = 'drift-particle';
     const size = 3 + Math.random() * 5;
@@ -1197,36 +1488,57 @@ function spawnHeroSparkles() {
     p.style.setProperty('--drift-x', (Math.random() * 60 - 30) + 'px');
     canvas.appendChild(p);
   }
-}
-spawnHeroSparkles();
 
-// Music player controls
-if (!C.audio) {
-  mus.onclick = () => alert("Background music can be linked in the script configuration.");
-} else {
-  mus.onclick = () => {
-    if (aud.paused) {
-      aud.play();
-      mus.classList.add('playing');
-      mus.textContent = '❚❚';
-    } else {
-      aud.pause();
-      mus.classList.remove('playing');
-      mus.textContent = '♪';
-    }
+  // Floating Rose Petals
+  for (let j = 0; j < 8; j++) {
+    const petal = document.createElement('div');
+    petal.className = 'rose-petal';
+    petal.style.left = (Math.random() * 90) + '%';
+    petal.style.animationDuration = (7 + Math.random() * 6) + 's';
+    petal.style.animationDelay = (Math.random() * 6) + 's';
+    petal.style.setProperty('--drift-x', (Math.random() * 80 - 40) + 'px');
+    canvas.appendChild(petal);
+  }
+}
+spawnAmbientFlora();
+
+// ==========================================
+// 1-TAP RSVP INTERACTION
+// ==========================================
+let selectedAttendance = "Attending Walima Reception";
+let selectedGuests = "2";
+
+// Attendance Option Taps
+document.querySelectorAll('#rsvpStatusGroup .tap-opt-btn').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('#rsvpStatusGroup .tap-opt-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedAttendance = btn.getAttribute('data-val');
   };
-}
+});
 
-// RSVP
-$('rsvp').onsubmit = e => {
-  e.preventDefault();
-  const f = new FormData(e.target);
-  let text = `*WEDDING RSVP – WALIMA ONLY*\n`;
-  text += `👤 *Name:* ${f.get('n')}\n`;
-  text += `💌 *Status:* ${f.get('ev')}\n`;
-  text += `👥 *Number of Guests:* ${f.get('g')}\n`;
-  if (f.get('m')) text += `💬 *Message:* ${f.get('m')}\n`;
-  window.open(`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(text)}`, '_blank');
+// Guest Count Pill Taps
+document.querySelectorAll('#guestPillsGroup .guest-pill-btn').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('#guestPillsGroup .guest-pill-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedGuests = btn.getAttribute('data-guests');
+  };
+});
+
+// 1-Tap Submit to WhatsApp
+$('sendRsvpWhatsAppBtn').onclick = () => {
+  const nameInput = $('rsvpGuestName').value.trim();
+  const guestName = nameInput ? nameInput : "Honoured Guest";
+
+  let msg = `*WEDDING RSVP – WALIMA RECEPTION*\n`;
+  msg += `👤 *Name:* ${guestName}\n`;
+  msg += `💌 *Attendance:* ${selectedAttendance}\n`;
+  msg += `👥 *Number of Guests:* ${selectedGuests}\n`;
+  msg += `🎉 *Celebration:* Shazeb Asghar with Daughter of Waqar Abbas (City Marriage Hall, Chakwal)\n`;
+  msg += `\nThank you for the gracious invitation!`;
+
+  window.open(`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
 };
 </script>
 </body>
