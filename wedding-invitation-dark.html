@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Zohan &amp; Rose – Royal Wedding Invitation (Midnight Dark Theme)</title>
-<meta name="description" content="Together with their families, Zohan and Rose joyfully invite you to celebrate their wedding under the stars.">
-<meta property="og:title" content="Zohan &amp; Rose – Royal Wedding Invitation (Midnight Edition)">
-<meta property="og:description" content="A magical celebration of love, laughter, and forever. Join us on 27.09.2026.">
+<title>Shazeb Asghar – Complete Wedding Celebrations Invitation</title>
+<meta name="description" content="Complete Wedding Celebrations of Shazeb Asghar with Daughter of Waqar Abbas: Mehndi 1, Mehndi 2, Barat & Walima. 15th to 18th December 2026.">
+<meta property="og:title" content="Shazeb Asghar – Complete Wedding Celebrations Invitation">
+<meta property="og:description" content="Mehndi 1 (15 Dec) · Mehndi 2 (16 Dec) · Barat (17 Dec) · Walima (18 Dec). Chakwal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,7 +20,6 @@
   --gold-bright: #ffe6b0;
   --gold-glow: rgba(243, 202, 133, 0.45);
   --gold-border: rgba(243, 202, 133, 0.35);
-  --rose-dark: #b54a5a;
   --text-main: #fcf4ec;
   --text-muted: #c9b1aa;
   --line-dark: rgba(243, 202, 133, 0.22);
@@ -47,7 +46,6 @@ body {
   font-weight: 400;
 }
 
-/* Master canvas */
 .wrap {
   position: relative;
   max-width: 480px;
@@ -60,7 +58,7 @@ body {
   border-right: 1px solid rgba(243, 202, 133, 0.15);
 }
 
-/* TOP THEME & VIDEO SWITCHER BAR */
+/* TOP BAR */
 .theme-switch-bar {
   position: sticky;
   top: 0;
@@ -69,36 +67,27 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line-dark);
-  padding: 8px 14px;
+  padding: 8px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: 'Montserrat', sans-serif;
-  font-size: 10.5px;
-  letter-spacing: 0.1em;
+  font-size: 10px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.theme-pill {
-  display: inline-flex;
+.version-badge {
+  font-weight: 600;
+  color: var(--gold-bright);
+  display: flex;
   align-items: center;
   gap: 5px;
-  padding: 5px 12px;
-  border-radius: 20px;
-  background: #f7efe6;
-  color: #2a1117;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s, background 0.2s;
 }
 
-.theme-pill:hover {
-  background: #fff;
-  transform: translateY(-1px);
-}
-
-.video-toggle-btns {
+.nav-actions {
   display: flex;
+  align-items: center;
   gap: 6px;
 }
 
@@ -106,9 +95,9 @@ body {
   background: #261118;
   border: 1px solid var(--line-dark);
   color: var(--gold);
-  padding: 4px 9px;
-  border-radius: 14px;
-  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 9.5px;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   transition: all 0.2s;
@@ -121,9 +110,21 @@ body {
   border-color: var(--gold);
 }
 
-/* ===================================================
-   1. VIDEO UNBOXING / REVEAL OVERLAY (DARK EDITION)
-   =================================================== */
+.all-versions-btn {
+  background: #38121b;
+  border: 1px solid var(--gold-border);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 9.5px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* VIDEO UNBOXING OVERLAY */
 #videoUnboxOverlay {
   position: fixed;
   inset: 0;
@@ -165,7 +166,6 @@ body {
   pointer-events: none;
 }
 
-/* Tap to Open Prompt with Glowing Royal Seal */
 .video-prompt-layer {
   position: absolute;
   inset: 0;
@@ -246,9 +246,7 @@ body {
   transition: opacity 0.4s ease-out;
 }
 
-.video-flash-layer.flashing {
-  opacity: 1;
-}
+.video-flash-layer.flashing { opacity: 1; }
 
 @keyframes sealFloatDark {
   0%, 100% {
@@ -266,9 +264,7 @@ body {
   50% { opacity: 1; transform: scale(1.02); }
 }
 
-/* ===================================================
-   2. HERO SECTION (MIDNIGHT PALACE ARCH & SWANS)
-   =================================================== */
+/* HERO SECTION */
 .hero-section {
   position: relative;
   width: 100%;
@@ -283,7 +279,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 48px 24px 34px;
+  padding: 44px 20px 32px;
   overflow: hidden;
   box-shadow: inset 0 -30px 40px rgba(0,0,0,0.8);
 }
@@ -299,29 +295,29 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  margin-top: 14%;
+  margin-top: 13%;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 18px rgba(0, 0, 0, 0.8);
 }
 
 .hero-sub {
   font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.38em;
+  font-size: 9.5px;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--gold-bright);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-weight: 500;
   text-shadow: 0 0 10px rgba(243, 202, 133, 0.4);
 }
 
 .hero-title {
   font-family: 'Great Vibes', cursive;
-  font-size: clamp(38px, 9vw, 50px);
+  font-size: clamp(34px, 8.5vw, 46px);
   line-height: 1.1;
   color: #fff4e4;
   margin-bottom: 2px;
@@ -329,11 +325,11 @@ body {
 
 .hero-date {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 21px;
-  letter-spacing: 0.28em;
+  font-size: 19px;
+  letter-spacing: 0.2em;
   color: var(--gold);
   font-weight: 600;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .hero-divider {
@@ -357,28 +353,36 @@ body {
 
 .hero-names {
   font-family: 'Great Vibes', cursive;
-  font-size: clamp(54px, 13.5vw, 76px);
-  line-height: 1.02;
+  font-size: clamp(48px, 12vw, 68px);
+  line-height: 1.05;
   color: #fff8ef;
-  text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.95),
-    0 0 25px rgba(243, 202, 133, 0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 25px rgba(243, 202, 133, 0.5);
 }
 
 .hero-names .amp {
   display: block;
-  font-size: clamp(30px, 7vw, 40px);
+  font-size: clamp(24px, 6vw, 32px);
   color: var(--gold);
-  margin: -4px 0 -2px;
+  margin: -2px 0;
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
   font-weight: 400;
 }
 
+.hero-names .bride-title {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(23px, 5.5vw, 29px);
+  font-style: italic;
+  color: #fff1e0;
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+}
+
 .hero-scroll {
   position: relative;
   z-index: 2;
-  margin-bottom: 24%;
+  margin-bottom: 23%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -390,7 +394,7 @@ body {
 
 .hero-scroll .scroll-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 9.5px;
+  font-size: 9px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 500;
@@ -408,9 +412,7 @@ body {
   50% { transform: translateY(6px); }
 }
 
-/* ===================================================
-   3. FLOATING GOLDEN SPARKLES & PETALS
-   =================================================== */
+/* FLOATING PARTICLES */
 .petal-canvas {
   position: absolute;
   inset: 0;
@@ -437,32 +439,80 @@ body {
   100% { opacity: 0; transform: translateY(105vh) translateX(var(--drift-x, 30px)) scale(1.1); }
 }
 
-/* ===================================================
-   4. CONTENT SECTIONS (DARK ROYAL PALETTE)
-   =================================================== */
+/* SECTIONS */
 section {
   position: relative;
-  padding: 60px 28px;
+  padding: 55px 24px;
   border-bottom: 1px solid var(--line-dark);
   background: var(--bg-night);
 }
 
 .section-arch-frame {
   position: relative;
-  padding: 42px 20px 36px;
+  padding: 38px 20px 34px;
   border: 1px solid var(--gold-border);
-  border-radius: 50% 50% 8px 8px / 14% 14% 8px 8px;
+  border-radius: 50% 50% 8px 8px / 12% 12% 8px 8px;
   background: linear-gradient(180deg, rgba(32, 14, 20, 0.75) 0%, rgba(20, 8, 12, 0.9) 100%);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 0 35px rgba(243, 202, 133, 0.05);
 }
 
 .arabic-header {
   font-family: 'Amiri', 'Traditional Arabic', serif;
-  font-size: 30px;
+  font-size: 32px;
   line-height: 1.4;
   color: var(--gold-bright);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   text-shadow: 0 0 14px rgba(243, 202, 133, 0.35);
+}
+
+.durood-line {
+  font-size: 19px;
+  font-style: italic;
+  color: var(--gold-bright);
+  margin-bottom: 16px;
+}
+
+.hosts-intro {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 14px;
+}
+
+.couple-showcase {
+  margin: 20px 0;
+}
+
+.groom-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 46px;
+  color: var(--gold-bright);
+  line-height: 1.1;
+  text-shadow: 0 0 15px rgba(243, 202, 133, 0.4);
+}
+
+.with-word {
+  font-style: italic;
+  font-size: 22px;
+  color: var(--gold);
+  margin: 2px 0;
+}
+
+.bride-name {
+  font-size: 25px;
+  font-style: italic;
+  color: #fff3e2;
+  letter-spacing: 0.03em;
+}
+
+.programme-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 18px;
+  font-weight: 600;
 }
 
 h2 {
@@ -483,25 +533,23 @@ h2 {
 }
 
 p {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   color: var(--text-muted);
-  font-size: 19px;
+  font-size: 18.5px;
   line-height: 1.6;
 }
 
-/* ===================================================
-   5. COUNTDOWN (DARK GLOW PILLS)
-   =================================================== */
+/* COUNTDOWN */
 .countdown-box {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 24px;
+  gap: 10px;
+  margin-top: 22px;
 }
 
 .countdown-box .cd-pill {
-  min-width: 68px;
-  padding: 12px 6px 10px;
+  min-width: 66px;
+  padding: 12px 4px 10px;
   border-radius: 6px;
   background: #250f16;
   border: 1px solid var(--gold-border);
@@ -510,93 +558,160 @@ p {
 
 .countdown-box b {
   display: block;
-  font-size: 36px;
+  font-size: 34px;
   line-height: 1;
   font-weight: 500;
   color: var(--gold-bright);
   font-family: 'Cormorant Garamond', Georgia, serif;
-  text-shadow: 0 0 10px rgba(243, 202, 133, 0.3);
 }
 
 .countdown-box small {
   display: block;
-  margin-top: 6px;
-  font-size: 9.5px;
-  letter-spacing: 0.16em;
+  margin-top: 5px;
+  font-size: 9px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gold);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
-/* ===================================================
-   6. SCHEDULE TIMELINE
-   =================================================== */
-.timeline {
+/* EVENT CARDS */
+.events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.event-card {
   position: relative;
-  max-width: 320px;
-  margin: 18px auto 0;
+  background: linear-gradient(145deg, #1f0b12 0%, #15060a 100%);
+  border: 1px solid var(--gold-border);
+  border-radius: 8px;
+  padding: 24px 18px;
   text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 82px;
-  top: 8px;
-  bottom: 8px;
-  width: 1px;
-  background: linear-gradient(180deg, transparent, var(--gold), transparent);
+.event-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line-dark);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
 }
 
-.timeline-event {
+.event-card-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: var(--gold-bright);
+  line-height: 1;
+}
+
+.event-card-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.event-host-badge {
+  font-size: 16px;
+  color: #eed6c9;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.event-time-row {
   display: flex;
   align-items: center;
-  position: relative;
-  margin-bottom: 26px;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
-.timeline-event::after {
-  content: "❀";
-  position: absolute;
-  left: 75px;
-  font-size: 15px;
-  color: var(--gold);
-  background: var(--bg-night);
-  padding: 2px 0;
-}
-
-.timeline-event time {
-  width: 64px;
-  font-weight: 600;
-  font-size: 19px;
+.event-time-badge {
+  background: rgba(243, 202, 133, 0.15);
+  border: 1px solid var(--gold-border);
   color: var(--gold-bright);
-  text-align: right;
-  padding-right: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  min-width: 90px;
+  text-align: center;
 }
 
-.timeline-event span {
-  padding-left: 28px;
-  color: var(--text-muted);
+.event-time-label {
+  color: var(--text-main);
   font-size: 18px;
   font-weight: 500;
 }
 
-/* ===================================================
-   7. VENUE & MAP
-   =================================================== */
-.venue-emblem {
-  font-size: 46px;
-  margin-bottom: 8px;
-  filter: drop-shadow(0 0 15px rgba(243, 202, 133, 0.3));
+.event-venue-box {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(243, 202, 133, 0.25);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 17px;
+  color: var(--text-muted);
+}
+
+.event-venue-box span.venue-icon {
+  color: var(--gold);
+  font-size: 18px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.timing-note-box {
+  margin-top: 22px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--gold);
+  background: rgba(243, 202, 133, 0.08);
+  border-radius: 0 4px 4px 0;
+  text-align: left;
+  font-size: 16px;
+  color: #eed6c9;
+  font-style: italic;
+}
+
+/* VENUES CARDS */
+.venue-section-card {
+  background: #190a0f;
+  border: 1px solid var(--gold-border);
+  border-radius: 8px;
+  padding: 22px 16px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.venue-section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gold-bright);
+  margin-bottom: 4px;
+}
+
+.venue-section-addr {
+  font-size: 17px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
 }
 
 .map-embed {
   width: 100%;
-  height: 230px;
+  height: 200px;
   border: 1px solid var(--gold-border);
-  border-radius: 6px;
-  margin-top: 20px;
+  border-radius: 4px;
+  margin-bottom: 12px;
   filter: invert(90%) hue-rotate(180deg) contrast(90%);
 }
 
@@ -605,21 +720,19 @@ p {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 16px;
-  padding: 12px 28px;
+  padding: 11px 22px;
   border: 1px solid var(--gold);
   border-radius: 4px;
   color: var(--gold-bright);
   background: #230d14;
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .btn:hover {
@@ -636,13 +749,70 @@ p {
   font-weight: 700;
 }
 
-.btn.solid:hover {
-  filter: brightness(1.1);
+/* CONTACTS SECTION */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 20px;
 }
 
-/* ===================================================
-   8. RSVP FORM (DARK THEME)
-   =================================================== */
+@media (max-width: 440px) {
+  .contacts-grid { grid-template-columns: 1fr; }
+}
+
+.contact-card {
+  background: #1b0c11;
+  border: 1px solid var(--gold-border);
+  border-radius: 6px;
+  padding: 16px 12px;
+  text-align: center;
+}
+
+.contact-name {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--gold-bright);
+  margin-bottom: 4px;
+}
+
+.contact-phone {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.contact-btn-row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.contact-mini-btn {
+  flex: 1;
+  padding: 6px 8px;
+  background: #2b1118;
+  border: 1px solid var(--gold-border);
+  color: var(--gold-bright);
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.contact-mini-btn:hover {
+  background: var(--gold);
+  color: #120508;
+}
+
+/* RSVP FORM */
 form {
   display: grid;
   gap: 14px;
@@ -669,9 +839,7 @@ input:focus, select:focus, textarea:focus {
   background: #280f17;
 }
 
-/* ===================================================
-   9. MUSIC BUTTON
-   =================================================== */
+/* MUSIC BUTTON */
 .music-btn {
   position: fixed;
   right: 20px;
@@ -692,9 +860,7 @@ input:focus, select:focus, textarea:focus {
   transition: transform 0.25s;
 }
 
-.music-btn.playing {
-  animation: pulseMusicDark 2.5s infinite ease-in-out;
-}
+.music-btn.playing { animation: pulseMusicDark 2.5s infinite ease-in-out; }
 
 @keyframes pulseMusicDark {
   0%, 100% { box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(243, 202, 133, 0.2); }
@@ -713,30 +879,25 @@ input:focus, select:focus, textarea:focus {
 </head>
 <body>
 
-<!-- THEME SWITCHER BAR -->
+<!-- TOP NAVIGATION BAR -->
 <div class="theme-switch-bar">
-  <div style="font-weight: 600; color: var(--gold-bright);">🌙 MIDNIGHT THEME</div>
-  <div class="video-toggle-btns">
+  <div class="version-badge">👑 Royal Wedding Celebrations</div>
+  <div class="nav-actions">
     <button class="v-btn" id="vEnvBtn" type="button" title="Use Envelope video">✉️ Envelope</button>
     <button class="v-btn active" id="vRingBtn" type="button" title="Use Ring video">💍 Ring</button>
   </div>
-  <a class="theme-pill" href="wedding-invitation-light.html" title="Switch to Light Theme">☀️ Light Theme</a>
 </div>
 
-<!-- ===================================================
-     1. VIDEO UNBOXING OVERLAY (ON CLICK -> VIDEO PLAYS & REVEALS)
-     =================================================== -->
+<!-- VIDEO UNBOXING OVERLAY -->
 <div id="videoUnboxOverlay" role="dialog" aria-modal="true" aria-label="Interactive wedding invitation reveal">
   <div class="video-frame-box" id="videoBox">
-    <!-- Video Player -->
     <video id="unboxVideo" playsinline webkit-playsinline muted preload="auto">
       <source id="videoSrc" src="assets/ring.mp4" type="video/mp4">
     </video>
 
-    <!-- Tap to Open Prompt -->
     <div class="video-prompt-layer" id="videoPrompt">
       <div class="prompt-royal-seal">
-        <span class="script" id="sealInitials">Z&amp;R</span>
+        <span class="script">SA</span>
       </div>
       <div class="prompt-cta">
         <span>Tap to Open Invitation</span>
@@ -744,31 +905,28 @@ input:focus, select:focus, textarea:focus {
       </div>
     </div>
 
-    <!-- Golden flash transition on reveal -->
     <div class="video-flash-layer" id="videoFlash"></div>
   </div>
 </div>
 
-<!-- ===================================================
-     2. MAIN INVITATION WEBPAGE (DARK EDITION)
-     =================================================== -->
+<!-- MAIN INVITATION WEBPAGE -->
 <div class="wrap">
 
-  <!-- HERO SECTION: MIDNIGHT PALACE ARCH & SWANS -->
+  <!-- HERO SECTION -->
   <section class="hero-section" id="heroSec">
     <div class="hero-overlay"></div>
     <div class="petal-canvas" id="petalCanvas"></div>
 
     <div class="hero-content">
-      <div class="hero-sub">Together with their families</div>
-      <div class="hero-title">Wedding Day</div>
-      <div class="hero-date" id="dateTxt">27.09.26</div>
+      <div class="hero-sub">With the blessings of Mohammed O Aly’ Mohammed</div>
+      <div class="hero-title">Wedding Celebrations</div>
+      <div class="hero-date">15 · 16 · 17 · 18 December 2026</div>
       <div class="hero-divider"><span>❦</span></div>
       
-      <div class="hero-names" id="heroNames">
-        Zohan
-        <span class="amp">&amp;</span>
-        Rose
+      <div class="hero-names">
+        Shazeb Asghar
+        <span class="amp">with</span>
+        <span class="bride-title">Daughter of Waqar Abbas</span>
       </div>
     </div>
 
@@ -778,16 +936,26 @@ input:focus, select:focus, textarea:focus {
     </div>
   </section>
 
-  <!-- SECTION 2: BISMILLAH & LIVE COUNTDOWN -->
+  <!-- SECTION 2: BISMILLAH & FAMILY INVITATION -->
   <section>
     <div class="section-arch-frame">
       <div class="arabic-header">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
-      <h2>Two Souls, One Destiny</h2>
-      <span class="flourish-icon">❦</span>
-      <p style="font-size: 21px; font-style: italic; color: var(--gold-bright);">“A lifetime written by Allah.”</p>
-      <p>Dear friends and family, join us for an evening of love, laughter, heartfelt duas, and unforgettable memories as we begin our forever journey together under the stars.</p>
+      <div class="durood-line">With the blessings of Mohammed O Aly’ Mohammed,</div>
       
-      <h2 style="margin-top: 36px; font-size: 38px;">The Celebration Begins In</h2>
+      <div class="hosts-intro">
+        <strong>Mr. &amp; Mrs Asghar Abbas</strong><br>
+        request the honour of your presence at the Wedding Ceremony of their beloved Son,
+      </div>
+
+      <div class="couple-showcase">
+        <div class="groom-name">Shazeb Asghar</div>
+        <div class="with-word">With</div>
+        <div class="bride-name">Daughter of Waqar Abbas</div>
+      </div>
+
+      <div class="programme-tag">Programme Insha’ Allah</div>
+      
+      <h2 style="margin-top: 36px; font-size: 38px;">Celebrations Begin In</h2>
       <div class="countdown-box" id="cd"></div>
       
       <div style="margin-top: 26px;">
@@ -796,60 +964,196 @@ input:focus, select:focus, textarea:focus {
     </div>
   </section>
 
-  <!-- SECTION 3: SCHEDULE OF EVENTS -->
+  <!-- SECTION 3: COMPLETE 4-DAY PROGRAMME -->
   <section>
-    <h2>Schedule of Events</h2>
+    <h2>Programme of Events</h2>
     <span class="flourish-icon">✿</span>
-    <div class="timeline" id="tl"></div>
-  </section>
-
-  <!-- SECTION 4: VENUE & LOCATION -->
-  <section>
-    <h2>The Venue</h2>
-    <span class="flourish-icon">❦</span>
-    <div class="venue-emblem">🕌</div>
-    <p id="venue" style="color: var(--gold-bright); font-weight: 700; font-size: 24px; margin-bottom: 4px;"></p>
-    <p id="addr" style="font-size: 18px;"></p>
     
-    <iframe class="map-embed" id="map" loading="lazy" title="Venue Map"></iframe>
-    <br>
-    <a class="btn solid" id="dir" target="_blank" rel="noopener">📍 Get Directions</a>
+    <div class="events-container">
+      <!-- 1. MEHNDI 1 -->
+      <div class="event-card">
+        <div class="event-card-header">
+          <div class="event-card-title">Mehndi</div>
+          <div class="event-card-date">Tuesday, 15th Dec 2026</div>
+        </div>
+
+        <div class="event-host-badge">
+          <strong>Zahra &amp; Noorain</strong> joyfully invite you to the Mehndi celebration of their chacha <strong>Shazeb Asghar</strong>
+        </div>
+        
+        <div class="event-time-row">
+          <div class="event-time-badge">2:00 PM</div>
+          <div class="event-time-label">Nikkah</div>
+        </div>
+        <div class="event-time-row">
+          <div class="event-time-badge">7:00 PM</div>
+          <div class="event-time-label">Mehndi Celebration</div>
+        </div>
+
+        <div class="event-venue-box">
+          <span class="venue-icon">📍</span>
+          <div><strong>Venue:</strong> Asghar’s, Hospital Road Chakwal</div>
+        </div>
+      </div>
+
+      <!-- 2. MEHNDI 2 -->
+      <div class="event-card">
+        <div class="event-card-header">
+          <div class="event-card-title">Mehndi 2</div>
+          <div class="event-card-date">Wednesday, 16th Dec 2026</div>
+        </div>
+
+        <div class="event-host-badge">
+          <strong>Jazeb Asghar</strong> cordially invites you to join in the celebrations, music, and festivities at the Mehndi ceremony of his beloved brother
+        </div>
+        
+        <div class="event-time-row">
+          <div class="event-time-badge">07:00 PM</div>
+          <div class="event-time-label">Music &amp; Festivities</div>
+        </div>
+
+        <div class="event-venue-box">
+          <span class="venue-icon">📍</span>
+          <div><strong>Venue:</strong> Asghar’s, Hospital Road Chakwal</div>
+        </div>
+      </div>
+
+      <!-- 3. BARAT -->
+      <div class="event-card">
+        <div class="event-card-header">
+          <div class="event-card-title">Barat</div>
+          <div class="event-card-date">Thursday, 17th Dec 2026</div>
+        </div>
+
+        <div class="event-host-badge">
+          Hosted with love by <strong>Mr. &amp; Mrs Asghar Abbas</strong>
+        </div>
+        
+        <div class="event-time-row">
+          <div class="event-time-badge">4:00 – 5:00 PM</div>
+          <div class="event-time-label">Sehra Bandi</div>
+        </div>
+        <div class="event-time-row">
+          <div class="event-time-badge">7:00 – 9:00 PM</div>
+          <div class="event-time-label">Dinner</div>
+        </div>
+
+        <div class="event-venue-box">
+          <span class="venue-icon">📍</span>
+          <div><strong>Venue:</strong> Asghar’s, Hospital Road Chakwal</div>
+        </div>
+      </div>
+
+      <!-- 4. WALIMA -->
+      <div class="event-card">
+        <div class="event-card-header">
+          <div class="event-card-title">Walima</div>
+          <div class="event-card-date">Friday, 18th Dec 2026</div>
+        </div>
+
+        <div class="event-host-badge">
+          Wedding Reception hosted by <strong>Mr. &amp; Mrs Asghar Abbas</strong>
+        </div>
+        
+        <div class="event-time-row">
+          <div class="event-time-badge">7:00 – 9:00 PM</div>
+          <div class="event-time-label">Dinner</div>
+        </div>
+
+        <div class="event-venue-box">
+          <span class="venue-icon">📍</span>
+          <div><strong>Venue:</strong> City Marriage Hall, Chakwal</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIMINGS REGULATION NOTE -->
+    <div class="timing-note-box">
+      ⚠️ <strong>A Note on Timings:</strong> As per local regulations, wedding halls close promptly at 10:00 PM.
+    </div>
   </section>
 
-  <!-- SECTION 5: DRESS CODE & GIFT PREFERENCE -->
+  <!-- SECTION 4: VENUES & DIRECTIONS -->
   <section>
-    <h2>Dress Code</h2>
-    <span class="flourish-icon">❀</span>
-    <p>We kindly invite our guests to adorn themselves in midnight royal attire, black-tie, deep emerald, or accents of warm gold for an unforgettable celebration.</p>
-    
-    <h2 style="margin-top: 36px;">Gift Preference</h2>
+    <h2>Event Venues</h2>
     <span class="flourish-icon">❦</span>
-    <p>Kindly, no boxed gifts please. Your presence and heartfelt prayers are our greatest blessings.</p>
+
+    <!-- VENUE 1: ASGHAR'S -->
+    <div class="venue-section-card">
+      <div style="font-size: 32px; margin-bottom: 6px;">🏛️</div>
+      <div class="venue-section-title">Asghar’s (Hospital Road)</div>
+      <div class="venue-section-addr">Hospital Road, Chakwal, Punjab, Pakistan</div>
+      <p style="font-size: 15px; color: var(--gold); margin-bottom: 12px;">★ Venue for Mehndi 1, Mehndi 2 &amp; Barat (15th, 16th &amp; 17th Dec)</p>
+      <iframe class="map-embed" src="https://www.google.com/maps?q=Hospital+Road+Chakwal+Pakistan&output=embed" loading="lazy" title="Asghars Chakwal Map"></iframe>
+      <a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=Hospital+Road+Chakwal+Pakistan" target="_blank" rel="noopener">📍 Get Directions to Asghar’s</a>
+    </div>
+
+    <!-- VENUE 2: CITY MARRIAGE HALL -->
+    <div class="venue-section-card" style="margin-bottom: 0;">
+      <div style="font-size: 32px; margin-bottom: 6px;">🕌</div>
+      <div class="venue-section-title">City Marriage Hall, Chakwal</div>
+      <div class="venue-section-addr">Chakwal, Punjab, Pakistan</div>
+      <p style="font-size: 15px; color: var(--gold); margin-bottom: 12px;">★ Venue for Walima Reception (Friday, 18th Dec)</p>
+      <iframe class="map-embed" src="https://www.google.com/maps?q=City+Marriage+Hall+Chakwal+Pakistan&output=embed" loading="lazy" title="City Marriage Hall Chakwal Map"></iframe>
+      <a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=City+Marriage+Hall+Chakwal+Pakistan" target="_blank" rel="noopener">📍 Get Directions to City Marriage Hall</a>
+    </div>
   </section>
 
-  <!-- SECTION 6: RSVP FORM -->
+  <!-- SECTION 5: CONTACTS & LOOKING FORWARD -->
+  <section>
+    <h2>Looking Forward</h2>
+    <span class="flourish-icon">✿</span>
+    <p style="font-size: 24px; color: var(--gold-bright); font-style: italic; margin-bottom: 6px;">All Family Members</p>
+    <p style="font-size: 20px; color: #eed6c9; font-style: italic; margin-bottom: 24px;">&amp; All Cousins and Friends</p>
+    
+    <div style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 600;">Contact For Inquiries</div>
+    <div class="contacts-grid">
+      <div class="contact-card">
+        <div class="contact-name">Asghar Abbas</div>
+        <div class="contact-phone">0334-5781214</div>
+        <div class="contact-btn-row">
+          <a class="contact-mini-btn" href="tel:03345781214">📞 Call</a>
+          <a class="contact-mini-btn" href="https://wa.me/923345781214" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-name">Jazeb Asghar</div>
+        <div class="contact-phone">0332-5781214</div>
+        <div class="contact-btn-row">
+          <a class="contact-mini-btn" href="tel:03325781214">📞 Call</a>
+          <a class="contact-mini-btn" href="https://wa.me/923325781214" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CONFIRM ATTENDANCE (RSVP) -->
   <section>
     <h2>Confirm Your Attendance</h2>
-    <span class="flourish-icon">✿</span>
-    <p>To help us prepare for a magnificent celebration, kindly let us know if you will be joining us.</p>
+    <span class="flourish-icon">❦</span>
+    <p>To help us prepare for four memorable days of celebrations, kindly let us know which ceremonies you will attend.</p>
     
     <form id="rsvp">
       <input name="n" placeholder="Your Full Name" aria-label="Your Full Name" required>
-      <select name="a" aria-label="Attendance status">
-        <option value="Joyfully accepts">Joyfully accepts with pleasure</option>
-        <option value="Regretfully declines">Regretfully declines with love</option>
+      <select name="ev" aria-label="Attending Events">
+        <option value="All Celebrations (15 - 18 Dec)">Attending: All Celebrations (15 – 18 Dec)</option>
+        <option value="Barat & Walima (17 & 18 Dec)">Attending: Barat &amp; Walima (17 &amp; 18 Dec)</option>
+        <option value="Mehndi & Walima (16 & 18 Dec)">Attending: Mehndi &amp; Walima (16 &amp; 18 Dec)</option>
+        <option value="Walima Only (18 Dec)">Attending: Walima Only (18 Dec)</option>
+        <option value="Regretfully Declines">Regretfully declines with love</option>
       </select>
       <input name="g" type="number" min="1" max="10" placeholder="Number of Guests" aria-label="Number of Guests" value="1">
-      <textarea name="m" rows="2" placeholder="A heartfelt blessing or message for the couple (optional)" aria-label="Message for the couple"></textarea>
+      <textarea name="m" rows="2" placeholder="Heartfelt wishes or prayer for the couple (optional)" aria-label="Message for the couple"></textarea>
       <button class="btn solid" type="submit">💌 Send RSVP via WhatsApp</button>
     </form>
   </section>
 
   <!-- SECTION 7: FOOTER -->
   <section style="padding: 44px 24px 60px; border-bottom: 0;">
-    <h2>With Love &amp; Gratitude</h2>
-    <p class="script" style="font-size: 34px; color: var(--gold-bright); margin-top: 10px;" id="sign">Zohan &amp; Rose</p>
-    <p style="font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-top: 8px;">See you at the wedding</p>
+    <h2>With Love &amp; Prayers</h2>
+    <p class="script" style="font-size: 36px; color: var(--gold-bright); margin-top: 10px;">Shazeb Asghar &amp; Family</p>
+    <p style="font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-top: 8px;">See you in Chakwal</p>
   </section>
 
 </div>
@@ -860,24 +1164,15 @@ input:focus, select:focus, textarea:focus {
 
 <script>
 // ==========================================
-// CONFIGURATION
+// CONFIGURATION (COMPLETE 4-DAY CELEBRATIONS)
 // ==========================================
 const C = {
-  groom: "Zohan",
-  bride: "Rose",
-  date: "2026-09-27T19:00:00+05:00",
-  dateText: "27.09.26",
-  venue: "Grand Palace Banquet",
-  addr: "Main Boulevard, Islamabad, Pakistan",
-  whatsapp: "923001234567",
+  groom: "Shazeb Asghar",
+  bride: "Daughter of Waqar Abbas",
+  countdownDate: "2026-12-15T14:00:00+05:00", // Mehndi 1 Nikkah (15 Dec 2:00 PM)
+  whatsapp: "923345781214", // Asghar Abbas
   audio: "",
-  video: "assets/ring.mp4",
-  events: [
-    ["7:00 PM", "Guest Arrival & Welcome Drinks"],
-    ["8:00 PM", "Sacred Nikkah Ceremony"],
-    ["9:00 PM", "Musical Hour & Photography"],
-    ["10:00 PM", "Royal Dinner & Dua"]
-  ]
+  video: "assets/ring.mp4"
 };
 
 const $ = id => document.getElementById(id);
@@ -888,30 +1183,9 @@ const overlay = $('videoUnboxOverlay');
 const promptLayer = $('videoPrompt');
 const flash = $('videoFlash');
 
-// Set monograms & names
-const initials = C.groom[0] + '&' + C.bride[0];
-$('sealInitials').textContent = initials;
-$('heroNames').innerHTML = `${C.groom}<span class="amp">&amp;</span>${C.bride}`;
-$('dateTxt').textContent = C.dateText;
-$('venue').textContent = C.venue;
-$('addr').textContent = C.addr;
-$('sign').textContent = `${C.groom} & ${C.bride}`;
-
-// Dynamic map & directions links
-$('map').src = 'https://www.google.com/maps?q=' + encodeURIComponent(C.venue + ' ' + C.addr) + '&output=embed';
-$('dir').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(C.venue + ' ' + C.addr);
-
-// Timeline events
-$('tl').innerHTML = C.events.map(e => `
-  <div class="timeline-event">
-    <time>${e[0]}</time>
-    <span>${e[1]}</span>
-  </div>
-`).join('');
-
 // Countdown
 function tickCountdown() {
-  const diff = Math.max(0, new Date(C.date) - new Date());
+  const diff = Math.max(0, new Date(C.countdownDate) - new Date());
   const totalSecs = Math.floor(diff / 1000);
   const values = [Math.floor(totalSecs / 86400), Math.floor((totalSecs % 86400) / 3600), Math.floor((totalSecs % 3600) / 60), totalSecs % 60];
   const labels = ['Days', 'Hours', 'Minutes', 'Seconds'];
@@ -925,12 +1199,12 @@ function tickCountdown() {
 tickCountdown();
 setInterval(tickCountdown, 1000);
 
-// Add to calendar
+// Add to Calendar
 $('addToCalBtn').onclick = () => {
-  const title = encodeURIComponent(`${C.groom} & ${C.bride}'s Wedding`);
-  const details = encodeURIComponent(`Royal wedding celebration of ${C.groom} & ${C.bride} at ${C.venue}, ${C.addr}`);
-  const location = encodeURIComponent(`${C.venue}, ${C.addr}`);
-  window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=20260927T140000Z/20260927T180000Z`, '_blank');
+  const title = encodeURIComponent("Shazeb Asghar – Complete Wedding Celebrations");
+  const details = encodeURIComponent("Wedding Celebrations of Shazeb Asghar with Daughter of Waqar Abbas (15-18 Dec 2026).\n\n15 Dec: Mehndi 1 (Nikkah 2PM, Mehndi 7PM at Asghar's)\n16 Dec: Mehndi 2 (7PM at Asghar's)\n17 Dec: Barat (Sehra Bandi 4PM, Dinner 7PM at Asghar's)\n18 Dec: Walima (Dinner 7PM at City Marriage Hall)");
+  const location = encodeURIComponent("Chakwal, Punjab, Pakistan");
+  window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=20261215T090000Z/20261218T170000Z`, '_blank');
 };
 
 // ==========================================
@@ -949,7 +1223,6 @@ function revealInvitation() {
     document.body.style.overflow = '';
   }, 350);
 
-  // Play audio if provided
   if (C.audio) {
     aud.src = C.audio;
     aud.play().then(() => {
@@ -963,13 +1236,10 @@ function handleVideoClick() {
   if (!hasStarted) {
     hasStarted = true;
     promptLayer.classList.add('hiding');
-    
     video.currentTime = 0;
     const playPromise = video.play();
     if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        revealInvitation();
-      });
+      playPromise.catch(() => revealInvitation());
     }
   } else {
     revealInvitation();
@@ -987,7 +1257,7 @@ video.addEventListener('ended', revealInvitation);
 
 document.body.style.overflow = 'hidden';
 
-// Video switchers in top bar
+// Switch videos in top bar
 $('vEnvBtn').onclick = () => {
   $('vEnvBtn').classList.add('active');
   $('vRingBtn').classList.remove('active');
@@ -1013,7 +1283,7 @@ $('scrollBtn').onclick = () => {
   window.scrollBy({ top: window.innerHeight * 0.85, behavior: 'smooth' });
 };
 
-// Ambient floating golden sparkles
+// Sparkles
 function spawnHeroSparkles() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const canvas = $('petalCanvas');
@@ -1032,11 +1302,9 @@ function spawnHeroSparkles() {
 }
 spawnHeroSparkles();
 
-// Music controls
+// Music player controls
 if (!C.audio) {
-  mus.onclick = () => {
-    alert("Background music is optional. Set C.audio in the script to enable lovely instrumental music!");
-  };
+  mus.onclick = () => alert("Background music can be linked in the script configuration.");
 } else {
   mus.onclick = () => {
     if (aud.paused) {
@@ -1051,11 +1319,14 @@ if (!C.audio) {
   };
 }
 
-// RSVP WhatsApp submission
+// RSVP
 $('rsvp').onsubmit = e => {
   e.preventDefault();
   const f = new FormData(e.target);
-  let text = `*WEDDING RSVP*\n👤 *Name:* ${f.get('n')}\n💌 *Status:* ${f.get('a')}\n👥 *Guests:* ${f.get('g')}\n`;
+  let text = `*WEDDING RSVP – COMPLETE CELEBRATIONS*\n`;
+  text += `👤 *Name:* ${f.get('n')}\n`;
+  text += `💌 *Event(s):* ${f.get('ev')}\n`;
+  text += `👥 *Number of Guests:* ${f.get('g')}\n`;
   if (f.get('m')) text += `💬 *Message:* ${f.get('m')}\n`;
   window.open(`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(text)}`, '_blank');
 };

@@ -1,69 +1,64 @@
-# 💍 Royal Digital Wedding Invitation (Light & Dark Editions)
+# 💍 Shazeb Asghar – Royal Wedding Invitations (Chakwal, Pakistan)
 
-A mobile-first, high-end digital wedding invitation web application featuring interactive unboxing video animations, classical palace archways with heart swans, and complete wedding stationery features.
-
----
-
-## 🌟 Available Themes & Pages
-
-| Page | Description | Video Default | Hero Visual |
-| :--- | :--- | :--- | :--- |
-| **[`index.html`](./index.html)** | Master portal allowing guests to pick their preferred experience | – | Dual Experience Selector |
-| **[`wedding-invitation-light.html`](./wedding-invitation-light.html)** | **Ivory Daylight Edition:** Warm alabaster, blush garden roses & gold | [`assets/envelope.mp4`](./assets/envelope.mp4) (Silk veil & glowing envelope) | Golden-hour palace arch with daylight swans |
-| **[`wedding-invitation-dark.html`](./wedding-invitation-dark.html)** | **Midnight Royal Edition:** Deep velvet obsidian, warm lanterns & royal gold | [`assets/ring.mp4`](./assets/ring.mp4) (Floating golden ring & flare) | Starry twilight arch with lanterns & moonlit swans |
-
-*Note: On both pages, a top navigation bar allows 1-click theme switching as well as toggling between the **Envelope** video and the **Ring** video.*
+Customized Midnight Royal Wedding Invitations for **Shazeb Asghar** with **Daughter of Waqar Abbas**, faithfully implemented from the official `Card Content.pdf`.
 
 ---
 
-## 🎬 How The Video Animation Reveal Works
+## 🌟 Four Deliverable Invitation Versions
 
-1. **Cover State:** When a guest lands on the page, the unboxing video is primed at frame 0 with an interactive glowing wax seal and prompt ("Tap to Open Invitation").
-2. **On Click / Tap:** The video plays smoothly with mobile `playsinline` support.
-   - **`envelope.mp4`**: A soft silk veil floats away and the envelope flap opens as golden illumination pours out.
-   - **`ring.mp4`**: A gold wedding ring lifts out of the envelope, rotates in misty smoke, and bursts into a radiant golden diamond flare.
-3. **Seamless Reveal:** Near the end of the video playback, a golden light flash transition triggers, the video overlay dissolves away, and the couple's wedding invitation with drifting petals appears in full glory.
-4. **Music Sync:** If background music is configured in `C.audio`, it automatically begins playing on the user's reveal tap.
-
----
-
-## 🛠️ Configuration & Customization
-
-Open either `wedding-invitation-light.html` or `wedding-invitation-dark.html` and edit the `C` configuration object:
-
-```javascript
-const C = {
-  groom: "Zohan",
-  bride: "Rose",
-  date: "2026-09-27T19:00:00+05:00", // ISO date string with timezone
-  dateText: "27.09.26",
-  venue: "Grand Palace Banquet",
-  addr: "Main Boulevard, Islamabad, Pakistan",
-  whatsapp: "923001234567", // WhatsApp number for instant RSVPs
-  audio: "", // Optional MP3 URL for background romantic music
-  video: "assets/envelope.mp4", // Default video ("assets/envelope.mp4" or "assets/ring.mp4")
-  events: [
-    ["7:00 PM", "Guest Arrival & Welcome Drinks"],
-    ["8:00 PM", "Sacred Nikkah Ceremony"],
-    ["9:00 PM", "Musical Hour & Photography"],
-    ["10:00 PM", "Royal Dinner & Dua"]
-  ]
-};
-```
+| Version | Deliverable Page | Included Events | Dates | Venue(s) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Portal** | **[`index.html`](./index.html)** | Master Gateway for all versions | Dec 2026 | All Venues |
+| **Version 1** | **[`barat-walima.html`](./barat-walima.html)** | Barat + Walima | 17 & 18 Dec 2026 | Asghar's & City Marriage Hall |
+| **Version 2** | **[`mehndi-walima.html`](./mehndi-walima.html)** | Mehndi 2 + Walima | 16 & 18 Dec 2026 | Asghar's & City Marriage Hall |
+| **Version 3** | **[`walima.html`](./walima.html)** | Walima Only | 18 Dec 2026 | City Marriage Hall, Chakwal |
+| **Version 4** | **[`complete-invitation.html`](./complete-invitation.html)** | Complete 4-Day Celebrations (Mehndi 1, Mehndi 2, Barat, Walima) | 15 – 18 Dec 2026 | Asghar's & City Marriage Hall |
 
 ---
 
-## 📂 Project Assets
+## 📋 Content & Event Verification (from `Card Content.pdf`)
 
-```text
-├── assets/
-│   ├── envelope.mp4             # Silk scarf & unfolding glowing envelope video
-│   ├── ring.mp4                 # Floating gold ring & diamond sparkle video
-│   ├── hero-arch-swans.jpg      # High-res daylight palace arch & swan lake (Light)
-│   ├── hero-arch-swans-dark.jpg # High-res midnight lantern arch & moonlit swans (Dark)
-│   └── envelope-embossed.jpg    # Ultra-luxury cotton embossed paper texture
-├── index.html                   # Master entry portal with theme choices
-├── wedding-invitation-light.html# Ivory & Rose Gold Daylight page
-├── wedding-invitation-dark.html # Midnight & Royal Gold page
-└── wedding-invitation.html      # Default standalone invitation page
-```
+### 1. Religious Opening & Family
+- **Bismillah:** `بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ`
+- **Durood:** *With the blessings of Mohammed O Aly’ Mohammed,*
+- **Hosts:** *Mr. & Mrs Asghar Abbas request the honour of your presence at the Wedding Ceremony of their beloved Son,*
+- **Groom:** *Shazeb Asghar*
+- **With:** *Daughter of Waqar Abbas*
+- **Programme:** *Programme Insha’ Allah*
+
+### 2. Events & Timings
+- **Mehndi 1 (Tuesday, 15th December 2026):**
+  - Hosted by: *Zahra & Noorain* (inviting to celebration of their chacha)
+  - Nikkah: 2:00 PM | Mehndi: 7:00 PM
+  - Venue: *Asghar’s, Hospital Road Chakwal*
+- **Mehndi 2 (Wednesday, 16th December 2026):**
+  - Hosted by: *Jazeb Asghar* (inviting to celebrations, music & festivities of his brother)
+  - Time: 07:00 PM
+  - Venue: *Asghar’s, Hospital Road Chakwal*
+  - Looking Forward: *All Cousins and Friends*
+- **Barat (Thursday, 17th December 2026):**
+  - Hosted by: *Mr. & Mrs Asghar Abbas*
+  - Sehra Bandi: 4:00 – 5:00 PM | Dinner: 7:00 – 9:00 PM
+  - Venue: *Asghar’s, Hospital Road Chakwal*
+- **Walima (Friday, 18th December 2026):**
+  - Hosted by: *Mr. & Mrs Asghar Abbas*
+  - Dinner: 7:00 – 9:00 PM
+  - Venue: *City Marriage Hall, Chakwal*
+
+### 3. Regulations & Contacts
+- **A Note on Timings:** *“As per local regulations, wedding halls close promptly at 10:00 PM.”*
+- **Looking Forward:** *All Family Members, All Cousins and Friends*
+- **Contacts:**
+  - Asghar Abbas: `0334-5781214`
+  - Jazeb Asghar: `0332-5781214`
+
+---
+
+## 🛠️ Testing Locally
+
+The dev server is running locally on port 3000:
+- Portal: `http://localhost:3000/index.html`
+- Version 1: `http://localhost:3000/barat-walima.html`
+- Version 2: `http://localhost:3000/mehndi-walima.html`
+- Version 3: `http://localhost:3000/walima.html`
+- Version 4: `http://localhost:3000/complete-invitation.html`

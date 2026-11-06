@@ -3,183 +3,343 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Zohan &amp; Rose – Royal Wedding Invitation</title>
-<meta name="description" content="Choose your invitation experience: Ivory Daylight or Midnight Royal.">
+<title>Shazeb Asghar – Royal Wedding Celebrations</title>
+<meta name="description" content="Wedding celebrations of Shazeb Asghar with Daughter of Waqar Abbas. December 2026 · Chakwal, Pakistan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --gold: #d4a359;
-  --gold-glow: rgba(212, 163, 89, 0.45);
+  --gold: #f3ca85;
+  --gold-bright: #ffe6b0;
+  --gold-glow: rgba(243, 202, 133, 0.45);
+  --gold-border: rgba(243, 202, 133, 0.35);
+  --bg-deep: #080305;
+  --bg-night: #12070a;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   min-height: 100vh;
-  background: radial-gradient(circle at 50% 30%, #1f0b10 0%, #0d0406 60%, #050102 100%);
+  background: radial-gradient(circle at 50% 25%, #240c14 0%, #120609 60%, #060204 100%);
   color: #fff;
   font-family: 'Cormorant Garamond', Georgia, serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px 20px;
+  padding: 36px 18px;
   text-align: center;
 }
 .script { font-family: 'Great Vibes', cursive; }
 .portal-card {
-  max-width: 520px;
+  max-width: 540px;
   width: 100%;
-  padding: 44px 28px;
-  border: 1px solid rgba(212, 163, 89, 0.35);
+  padding: 44px 26px 38px;
+  border: 1px solid var(--gold-border);
   border-radius: 12px;
-  background: rgba(26, 11, 16, 0.85);
+  background: rgba(22, 9, 13, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), inset 0 0 35px rgba(212, 163, 89, 0.08);
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.9), inset 0 0 35px rgba(243, 202, 133, 0.08);
+}
+.arabic-bismillah {
+  font-family: 'Amiri', serif;
+  font-size: 28px;
+  color: var(--gold-bright);
+  margin-bottom: 6px;
+  text-shadow: 0 0 10px rgba(243, 202, 133, 0.3);
+}
+.durood {
+  font-size: 17px;
+  font-style: italic;
+  color: #eed6c9;
+  margin-bottom: 14px;
 }
 .eyebrow {
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.35em;
+  font-size: 10px;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 12px;
-}
-h1 {
-  font-size: clamp(48px, 12vw, 68px);
-  line-height: 1.05;
-  color: #fff6ee;
-  margin-bottom: 6px;
-  text-shadow: 0 0 20px rgba(212, 163, 89, 0.4);
-}
-h1 span {
-  display: block;
-  font-size: 32px;
-  color: var(--gold);
-  margin: -6px 0;
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-}
-.date {
-  font-size: 20px;
-  letter-spacing: 0.25em;
-  color: #eed5ce;
-  margin-bottom: 30px;
-}
-.instruction {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #cbb4ad;
-  margin-bottom: 24px;
-}
-.choice-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-@media (max-width: 480px) {
-  .choice-grid { grid-template-columns: 1fr; }
-}
-.choice-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-.choice-light {
-  background: linear-gradient(145deg, #fffcf9 0%, #f4e8df 100%);
-  color: #4a1d24;
-  border: 1px solid rgba(181, 108, 117, 0.4);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-.choice-light:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 35px rgba(212, 163, 89, 0.35);
-  border-color: var(--gold);
-}
-.choice-dark {
-  background: linear-gradient(145deg, #240f16 0%, #120609 100%);
-  color: #fcefe6;
-  border: 1px solid rgba(212, 163, 89, 0.4);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-}
-.choice-dark:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 35px rgba(212, 163, 89, 0.45);
-  border-color: var(--gold);
-}
-.choice-icon {
-  font-size: 32px;
   margin-bottom: 10px;
 }
-.choice-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
+h1 {
+  font-size: clamp(42px, 10vw, 58px);
+  line-height: 1.05;
+  color: #fff6ee;
+  margin-bottom: 4px;
+  text-shadow: 0 0 22px rgba(243, 202, 133, 0.4);
 }
-.choice-desc {
-  font-size: 14px;
-  opacity: 0.8;
+.bride-sub {
+  font-size: 25px;
   font-style: italic;
+  color: #ffe8d6;
+  margin-bottom: 18px;
 }
-.feature-list {
-  margin-top: 32px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(212, 163, 89, 0.2);
+.date-loc {
+  font-size: 17px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(243, 202, 133, 0.2);
+}
+.private-notice-box {
+  background: rgba(243, 202, 133, 0.07);
+  border: 1px solid var(--gold-border);
+  border-radius: 8px;
+  padding: 20px 18px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.private-notice-box .notice-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.private-notice-box p {
+  font-size: 18px;
+  color: #f7e6d9;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.private-notice-box small {
+  display: block;
+  font-size: 14px;
+  color: #c9b1aa;
+  font-style: italic;
+  margin-top: 6px;
+}
+.contacts-footer {
+  margin-top: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(243, 202, 133, 0.2);
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #c9b1aa;
+}
+.contacts-footer a {
+  color: var(--gold-bright);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contacts-footer a:hover {
+  text-decoration: underline;
+}
+
+/* FAMILY SECURE ACCESS PANEL */
+.family-toggle-btn {
+  margin-top: 26px;
+  background: transparent;
+  border: 1px dashed rgba(243, 202, 133, 0.3);
+  color: #b59b92;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #bfa39b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.family-toggle-btn:hover {
+  color: var(--gold-bright);
+  border-color: var(--gold);
+}
+
+#familyPanel {
+  display: none;
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--gold-border);
+  text-align: left;
+}
+
+.family-panel-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.link-row {
+  background: #190a0f;
+  border: 1px solid var(--gold-border);
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.link-info {
+  flex: 1;
+}
+
+.link-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.link-meta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+.link-btn {
+  background: #2b1118;
+  border: 1px solid var(--gold-border);
+  color: var(--gold-bright);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10.5px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.link-btn:hover {
+  background: var(--gold);
+  color: #120508;
+}
+
+.copy-btn {
+  background: transparent;
+  border: 1px solid var(--gold-border);
+  color: #eed6c9;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 10.5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+.copy-btn:hover {
+  color: #fff;
+  border-color: var(--gold-bright);
 }
 </style>
 </head>
 <body>
 
 <div class="portal-card">
-  <div class="eyebrow">The Royal Wedding Invitation</div>
-  <h1 class="script">Zohan <span>&amp;</span> Rose</h1>
-  <div class="date">27 · 09 · 2026</div>
+  <div class="arabic-bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+  <div class="durood">With the blessings of Mohammed O Aly’ Mohammed</div>
+  <div class="eyebrow">The Royal Wedding Celebrations</div>
+  
+  <h1 class="script">Shazeb Asghar</h1>
+  <div class="bride-sub">with Daughter of Waqar Abbas</div>
+  
+  <div class="date-loc">December 2026 · Chakwal, Pakistan</div>
 
-  <div class="instruction">Choose your experience</div>
-
-  <div class="choice-grid">
-    <a class="choice-card choice-light" href="wedding-invitation-light.html">
-      <div class="choice-icon">☀️</div>
-      <div class="choice-title">Ivory Light Theme</div>
-      <div class="choice-desc">Palace garden arch, soft roses, daylight swans &amp; envelope video</div>
-    </a>
-
-    <a class="choice-card choice-dark" href="wedding-invitation-dark.html">
-      <div class="choice-icon">🌙</div>
-      <div class="choice-title">Midnight Dark Theme</div>
-      <div class="choice-desc">Starry twilight arch, glowing lanterns, moonlit swans &amp; ring sparkle video</div>
-    </a>
+  <!-- PRIVATE INVITATION NOTICE -->
+  <div class="private-notice-box">
+    <div class="notice-icon">💌</div>
+    <p>Please open the personalized invitation link sent directly to you by the family.</p>
+    <small>Each guest invitation is uniquely personalized for their respective wedding events.</small>
   </div>
 
-  <div class="feature-list">
-    <span>✉️ Interactive Video Unbox</span>
+  <div class="contacts-footer">
+    <span>📞 Asghar Abbas: <a href="tel:03345781214">0334-5781214</a></span>
     <span>•</span>
-    <span>🦢 Swan Lake Arch</span>
-    <span>•</span>
-    <span>💌 WhatsApp RSVP</span>
+    <span>📞 Jazeb Asghar: <a href="tel:03325781214">0332-5781214</a></span>
+  </div>
+
+  <!-- FAMILY / HOST DISCREET ACCESS BUTTON -->
+  <div>
+    <button class="family-toggle-btn" id="familyToggleBtn" type="button">🗝️ Family &amp; Host Portal</button>
+  </div>
+
+  <!-- HIDDEN FAMILY ACCESS PANEL -->
+  <div id="familyPanel">
+    <div class="family-panel-header">Family Shareable Invitation Links</div>
+
+    <!-- VERSION 1 -->
+    <div class="link-row">
+      <div class="link-info">
+        <div class="link-title">Barat + Walima</div>
+        <div class="link-meta">17 &amp; 18 Dec · Barat &amp; Walima Only</div>
+      </div>
+      <a class="link-btn" href="barat-walima.html" target="_blank">Open</a>
+      <button class="copy-btn" onclick="copyLink('barat-walima.html', this)">📋 Copy</button>
+    </div>
+
+    <!-- VERSION 2 -->
+    <div class="link-row">
+      <div class="link-info">
+        <div class="link-title">Mehndi 2 + Walima</div>
+        <div class="link-meta">16 &amp; 18 Dec · Music &amp; Walima Only</div>
+      </div>
+      <a class="link-btn" href="mehndi-walima.html" target="_blank">Open</a>
+      <button class="copy-btn" onclick="copyLink('mehndi-walima.html', this)">📋 Copy</button>
+    </div>
+
+    <!-- VERSION 3 -->
+    <div class="link-row">
+      <div class="link-info">
+        <div class="link-title">Walima Only</div>
+        <div class="link-meta">18 Dec · City Marriage Hall Only</div>
+      </div>
+      <a class="link-btn" href="walima.html" target="_blank">Open</a>
+      <button class="copy-btn" onclick="copyLink('walima.html', this)">📋 Copy</button>
+    </div>
+
+    <!-- VERSION 4 -->
+    <div class="link-row">
+      <div class="link-info">
+        <div class="link-title">Complete Celebrations</div>
+        <div class="link-meta">15 – 18 Dec · All 4 Ceremonies</div>
+      </div>
+      <a class="link-btn" href="complete-invitation.html" target="_blank">Open</a>
+      <button class="copy-btn" onclick="copyLink('complete-invitation.html', this)">📋 Copy</button>
+    </div>
   </div>
 </div>
+
+<script>
+const familyToggle = document.getElementById('familyToggleBtn');
+const familyPanel = document.getElementById('familyPanel');
+
+familyToggle.onclick = () => {
+  if (familyPanel.style.display === 'block') {
+    familyPanel.style.display = 'none';
+  } else {
+    const pin = prompt("Enter Family Access PIN:");
+    if (pin === "1214") {
+      familyPanel.style.display = 'block';
+      familyToggle.style.display = 'none';
+    } else if (pin !== null) {
+      alert("Incorrect PIN.");
+    }
+  }
+};
+
+function copyLink(filename, btn) {
+  const url = window.location.origin + '/' + filename;
+  navigator.clipboard.writeText(url).then(() => {
+    const oldText = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    setTimeout(() => btn.textContent = oldText, 2000);
+  }).catch(() => {
+    prompt("Copy this invitation link:", url);
+  });
+}
+</script>
 
 </body>
 </html>
