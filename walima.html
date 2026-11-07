@@ -1277,6 +1277,9 @@ p {
 
 </div>
 
+<!-- WEDDING BACKGROUND MUSIC (UPLOADED AUDIO TRACK) -->
+<audio id="weddingBgMusic" src="assets/wedding-music.mp3" preload="auto" loop></audio>
+
 <!-- MUSIC CONTROLLER -->
 <button class="music-btn" id="mus" aria-label="Toggle background music" title="Toggle music">♪</button>
 
@@ -1298,6 +1301,7 @@ const video = $('unboxVideo');
 const overlay = $('videoUnboxOverlay');
 const promptLayer = $('videoPrompt');
 const flash = $('videoFlash');
+const bgMusic = $('weddingBgMusic');
 
 // ==========================================
 // COUNTDOWN
@@ -1330,9 +1334,6 @@ $('addToCalBtn').onclick = () => {
 // ==========================================
 let audioCtx = null;
 let musicPlaying = false;
-let ambientGainNode = null;
-let tanpuraGainNode = null;
-let melodyTimer = null;
 
 function initAudioContext() {
   if (!audioCtx) {
@@ -1392,120 +1393,26 @@ function playRingRevealSound() {
   } catch (e) {}
 }
 
-// 2. Hindi Wedding Music: Sitar / Shehnai / Bansuri with Tanpura Drone
-const hindiMelody = [
-  // Phrase 1: Festive Bridal Entry
-  { f: 293.66, d: 0.65 },
-  { f: 369.99, d: 0.70 },
-  { f: 440.00, d: 0.85 },
-  { f: 493.88, d: 0.90 },
-  { f: 440.00, d: 0.60 },
-  { f: 369.99, d: 0.70 },
-  { f: 329.63, d: 0.60 },
-  { f: 293.66, d: 1.40, rest: 0.35 },
-
-  // Phrase 2: Romantic Shehnai Flourish
-  { f: 369.99, d: 0.55 },
-  { f: 440.00, d: 0.65 },
-  { f: 554.37, d: 0.75 },
-  { f: 587.33, d: 1.15 },
-  { f: 554.37, d: 0.50 },
-  { f: 493.88, d: 0.65 },
-  { f: 440.00, d: 1.35, rest: 0.35 },
-
-  // Phrase 3: High Celebration
-  { f: 587.33, d: 0.60 },
-  { f: 659.25, d: 0.85 },
-  { f: 587.33, d: 0.50 },
-  { f: 554.37, d: 0.65 },
-  { f: 493.88, d: 0.60 },
-  { f: 440.00, d: 0.85 },
-  { f: 369.99, d: 0.60 },
-  { f: 440.00, d: 1.25, rest: 0.35 },
-
-  // Phrase 4: Auspicious Resolution
-  { f: 493.88, d: 0.60 },
-  { f: 440.00, d: 0.65 },
-  { f: 369.99, d: 0.70 },
-  { f: 329.63, d: 0.55 },
-  { f: 369.99, d: 0.65 },
-  { f: 293.66, d: 1.80, rest: 0.70 }
-];
-
-let noteCursor = 0;
-
-function playNextHindiNote() {
-  if (!musicPlaying) return;
-  const item = hindiMelody[noteCursor % hindiMelody.length];
-  noteCursor++;
-
-  const now = audioCtx.currentTime;
-  const osc = audioCtx.createOscillator();
-  const noteGain = audioCtx.createGain();
-
-  const filter = audioCtx.createBiquadFilter();
-  filter.type = 'lowpass';
-  filter.frequency.setValueAtTime(1250, now);
-
-  osc.type = 'triangle';
-  osc.frequency.setValueAtTime(item.f, now);
-
-  osc.frequency.exponentialRampToValueAtTime(item.f * 1.008, now + item.d * 0.4);
-  osc.frequency.exponentialRampToValueAtTime(item.f, now + item.d);
-
-  noteGain.gain.setValueAtTime(0.0001, now);
-  noteGain.gain.linearRampToValueAtTime(0.07, now + 0.08);
-  noteGain.gain.exponentialRampToValueAtTime(0.0001, now + item.d + 0.15);
-
-  osc.connect(filter);
-  filter.connect(noteGain);
-  noteGain.connect(ambientGainNode);
-
-  osc.start(now);
-  osc.stop(now + item.d + 0.2);
-
-  const delayMs = (item.d + (item.rest || 0)) * 1000;
-  melodyTimer = setTimeout(playNextHindiNote, delayMs);
-}
-
+// 2. Client Wedding Music (Uploaded MP3 Track)
 function startWeddingMusic() {
-  if (musicPlaying) return;
-  try {
-    initAudioContext();
-    musicPlaying = true;
-    mus.classList.add('playing');
-    mus.textContent = '❚❚';
-
-    ambientGainNode = audioCtx.createGain();
-    ambientGainNode.gain.setValueAtTime(0.001, audioCtx.currentTime);
-    ambientGainNode.gain.linearRampToValueAtTime(0.065, audioCtx.currentTime + 2.0);
-    ambientGainNode.connect(audioCtx.destination);
-
-    tanpuraGainNode = audioCtx.createGain();
-    tanpuraGainNode.gain.setValueAtTime(0.035, audioCtx.currentTime);
-    tanpuraGainNode.connect(ambientGainNode);
-
-    [146.83, 220.00, 293.66].forEach(freq => {
-      const droneOsc = audioCtx.createOscillator();
-      droneOsc.type = 'sine';
-      droneOsc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-      droneOsc.connect(tanpuraGainNode);
-      droneOsc.start();
-    });
-
-    noteCursor = 0;
-    playNextHindiNote();
-  } catch (e) {}
+  if (!bgMusic) return;
+  bgMusic.volume = 0.65;
+  const playPromise = bgMusic.play();
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      musicPlaying = true;
+      mus.classList.add('playing');
+      mus.textContent = '❚❚';
+    }).catch(() => {});
+  }
 }
 
 function stopWeddingMusic() {
+  if (!bgMusic) return;
+  bgMusic.pause();
   musicPlaying = false;
   mus.classList.remove('playing');
   mus.textContent = '♪';
-  if (melodyTimer) clearTimeout(melodyTimer);
-  if (ambientGainNode && audioCtx) {
-    ambientGainNode.gain.linearRampToValueAtTime(0.0001, audioCtx.currentTime + 0.5);
-  }
 }
 
 mus.onclick = () => {
@@ -1533,7 +1440,8 @@ function revealInvitation() {
     overlay.classList.add('revealed');
     document.body.style.overflow = '';
     triggerFlowerThrow($('heroSec'));
-    setTimeout(startWeddingMusic, 1200);
+    // Smooth start of the uploaded music after reveal chime
+    setTimeout(startWeddingMusic, 900);
   }, 350);
 }
 
@@ -1542,6 +1450,7 @@ function handleVideoClick() {
     hasStarted = true;
     promptLayer.classList.add('hiding');
     initAudioContext();
+    if (bgMusic) bgMusic.load(); // Warm up on user gesture
     
     video.currentTime = 0;
     const playPromise = video.play();
