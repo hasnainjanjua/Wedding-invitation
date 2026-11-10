@@ -229,6 +229,17 @@ body {
   box-shadow: inset 0 -30px 40px rgba(0,0,0,0.8);
 }
 
+.hero-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -1097,6 +1108,10 @@ p {
 
   <!-- HERO SECTION: PALACE ARCH & MOONLIT SWANS -->
   <section class="hero-section" id="heroSec">
+    <!-- ANIMATED HERO SWANS VIDEO BACKGROUND -->
+    <video id="heroBgVideo" class="hero-bg-video" autoplay loop muted playsinline webkit-playsinline poster="assets/hero-arch-swans-dark.jpg">
+      <source src="assets/hero-swans-animated.mp4" type="video/mp4">
+    </video>
     <div class="hero-overlay"></div>
     <div class="petal-canvas" id="petalCanvas"></div>
 
@@ -1534,6 +1549,8 @@ function revealInvitation() {
     overlay.classList.add('revealed');
     document.body.style.overflow = '';
     triggerFlowerThrow($('heroSec'));
+    const heroVid = $('heroBgVideo');
+    if (heroVid) { heroVid.play().catch(() => {}); }
     // Smooth start of the uploaded music after reveal chime
     setTimeout(startWeddingMusic, 900);
   }, 350);
@@ -1545,6 +1562,8 @@ function handleVideoClick() {
     promptLayer.classList.add('hiding');
     initAudioContext();
     if (bgMusic) bgMusic.load(); // Warm up on user gesture
+    const heroVid = $('heroBgVideo');
+    if (heroVid) heroVid.load();
     
     video.currentTime = 0;
     const playPromise = video.play();
