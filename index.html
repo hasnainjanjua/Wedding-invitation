@@ -1,345 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Shazeb Asghar – Royal Wedding Celebrations</title>
-<meta name="description" content="Wedding celebrations of Shazeb Asghar with Daughter of Waqar Abbas. December 2026 · Chakwal, Pakistan.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root {
-  --gold: #f3ca85;
-  --gold-bright: #ffe6b0;
-  --gold-glow: rgba(243, 202, 133, 0.45);
-  --gold-border: rgba(243, 202, 133, 0.35);
-  --bg-deep: #080305;
-  --bg-night: #12070a;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  min-height: 100vh;
-  background: radial-gradient(circle at 50% 25%, #240c14 0%, #120609 60%, #060204 100%);
-  color: #fff;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 36px 18px;
-  text-align: center;
-}
-.script { font-family: 'Great Vibes', cursive; }
-.portal-card {
-  max-width: 540px;
-  width: 100%;
-  padding: 44px 26px 38px;
-  border: 1px solid var(--gold-border);
-  border-radius: 12px;
-  background: rgba(22, 9, 13, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.9), inset 0 0 35px rgba(243, 202, 133, 0.08);
-}
-.arabic-bismillah {
-  font-family: 'Amiri', serif;
-  font-size: 28px;
-  color: var(--gold-bright);
-  margin-bottom: 6px;
-  text-shadow: 0 0 10px rgba(243, 202, 133, 0.3);
-}
-.durood {
-  font-size: 17px;
-  font-style: italic;
-  color: #eed6c9;
-  margin-bottom: 14px;
-}
-.eyebrow {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 10px;
-}
-h1 {
-  font-size: clamp(42px, 10vw, 58px);
-  line-height: 1.05;
-  color: #fff6ee;
-  margin-bottom: 4px;
-  text-shadow: 0 0 22px rgba(243, 202, 133, 0.4);
-}
-.bride-sub {
-  font-size: 25px;
-  font-style: italic;
-  color: #ffe8d6;
-  margin-bottom: 18px;
-}
-.date-loc {
-  font-size: 17px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 24px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(243, 202, 133, 0.2);
-}
-.private-notice-box {
-  background: rgba(243, 202, 133, 0.07);
-  border: 1px solid var(--gold-border);
-  border-radius: 8px;
-  padding: 20px 18px;
-  margin-bottom: 24px;
-  text-align: center;
-}
-.private-notice-box .notice-icon {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-.private-notice-box p {
-  font-size: 18px;
-  color: #f7e6d9;
-  line-height: 1.5;
-  margin-bottom: 4px;
-}
-.private-notice-box small {
-  display: block;
-  font-size: 14px;
-  color: #c9b1aa;
-  font-style: italic;
-  margin-top: 6px;
-}
-.contacts-footer {
-  margin-top: 14px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(243, 202, 133, 0.2);
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: #c9b1aa;
-}
-.contacts-footer a {
-  color: var(--gold-bright);
-  text-decoration: none;
-  font-weight: 600;
-}
-.contacts-footer a:hover {
-  text-decoration: underline;
-}
-
-/* FAMILY SECURE ACCESS PANEL */
-.family-toggle-btn {
-  margin-top: 26px;
-  background: transparent;
-  border: 1px dashed rgba(243, 202, 133, 0.3);
-  color: #b59b92;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.family-toggle-btn:hover {
-  color: var(--gold-bright);
-  border-color: var(--gold);
-}
-
-#familyPanel {
-  display: none;
-  margin-top: 24px;
-  padding-top: 22px;
-  border-top: 1px solid var(--gold-border);
-  text-align: left;
-}
-
-.family-panel-header {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 600;
-  margin-bottom: 14px;
-  text-align: center;
-}
-
-.link-row {
-  background: #190a0f;
-  border: 1px solid var(--gold-border);
-  border-radius: 6px;
-  padding: 12px 14px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-
-.link-info {
-  flex: 1;
-}
-
-.link-title {
-  font-size: 17px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 2px;
-}
-
-.link-meta {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  color: var(--gold);
-  letter-spacing: 0.05em;
-}
-
-.link-btn {
-  background: #2b1118;
-  border: 1px solid var(--gold-border);
-  color: var(--gold-bright);
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10.5px;
-  text-decoration: none;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.link-btn:hover {
-  background: var(--gold);
-  color: #120508;
-}
-
-.copy-btn {
-  background: transparent;
-  border: 1px solid var(--gold-border);
-  color: #eed6c9;
-  padding: 6px 10px;
-  border-radius: 4px;
-  font-size: 10.5px;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-}
-.copy-btn:hover {
-  color: #fff;
-  border-color: var(--gold-bright);
-}
-</style>
-</head>
-<body>
-
-<div class="portal-card">
-  <div class="arabic-bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
-  <div class="durood">With the blessings of Mohammed O Aly’ Mohammed</div>
-  <div class="eyebrow">The Royal Wedding Celebrations</div>
-  
-  <h1 class="script">Shazeb Asghar</h1>
-  <div class="bride-sub">with Daughter of Waqar Abbas</div>
-  
-  <div class="date-loc">December 2026 · Chakwal, Pakistan</div>
-
-  <!-- PRIVATE INVITATION NOTICE -->
-  <div class="private-notice-box">
-    <div class="notice-icon">💌</div>
-    <p>Please open the personalized invitation link sent directly to you by the family.</p>
-    <small>Each guest invitation is uniquely personalized for their respective wedding events.</small>
-  </div>
-
-  <div class="contacts-footer">
-    <span>📞 Asghar Abbas: <a href="tel:03345781214">0334-5781214</a></span>
-    <span>•</span>
-    <span>📞 Jazeb Asghar: <a href="tel:03325781214">0332-5781214</a></span>
-  </div>
-
-  <!-- FAMILY / HOST DISCREET ACCESS BUTTON -->
-  <div>
-    <button class="family-toggle-btn" id="familyToggleBtn" type="button">🗝️ Family &amp; Host Portal</button>
-  </div>
-
-  <!-- HIDDEN FAMILY ACCESS PANEL -->
-  <div id="familyPanel">
-    <div class="family-panel-header">Family Shareable Invitation Links</div>
-
-    <!-- VERSION 1 -->
-    <div class="link-row">
-      <div class="link-info">
-        <div class="link-title">Musical Night, Barat + Walima</div>
-        <div class="link-meta">16 – 18 Dec · Musical Night, Barat &amp; Walima</div>
-      </div>
-      <a class="link-btn" href="barat-walima.html" target="_blank">Open</a>
-      <button class="copy-btn" onclick="copyLink('barat-walima.html', this)">📋 Copy</button>
-    </div>
-
-    <!-- VERSION 2 -->
-    <div class="link-row">
-      <div class="link-info">
-        <div class="link-title">Musical Night + Walima</div>
-        <div class="link-meta">16 &amp; 18 Dec · Musical Night &amp; Walima Only</div>
-      </div>
-      <a class="link-btn" href="mehndi-walima.html" target="_blank">Open</a>
-      <button class="copy-btn" onclick="copyLink('mehndi-walima.html', this)">📋 Copy</button>
-    </div>
-
-    <!-- VERSION 3 -->
-    <div class="link-row">
-      <div class="link-info">
-        <div class="link-title">Walima Only</div>
-        <div class="link-meta">18 Dec · City Marriage Hall Only</div>
-      </div>
-      <a class="link-btn" href="walima.html" target="_blank">Open</a>
-      <button class="copy-btn" onclick="copyLink('walima.html', this)">📋 Copy</button>
-    </div>
-
-    <!-- VERSION 4 -->
-    <div class="link-row">
-      <div class="link-info">
-        <div class="link-title">Complete Celebrations</div>
-        <div class="link-meta">15 – 18 Dec · All 4 Ceremonies</div>
-      </div>
-      <a class="link-btn" href="complete-invitation.html" target="_blank">Open</a>
-      <button class="copy-btn" onclick="copyLink('complete-invitation.html', this)">📋 Copy</button>
-    </div>
-  </div>
-</div>
-
-<script>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Shazeb Asghar – Royal Wedding Celebrations</title><meta name="description" content="Wedding celebrations of Shazeb Asghar with Daughter of Waqar Abbas. December 2026 · Chakwal, Pakistan."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"><style>:root{--gold:#f3ca85;--gold-bright:#ffe6b0;--gold-glow:rgba(243,202,133,0.45);--gold-border:rgba(243,202,133,0.35);--bg-deep:#080305;--bg-night:#12070a}*{box-sizing:border-box;margin:0;padding:0}body{min-height:100vh;background:radial-gradient(circle at 50% 25%,#240c14 0%,#120609 60%,#060204 100%);color:#fff;font-family:'Cormorant Garamond',Georgia,serif;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 18px;text-align:center}.script{font-family:'Great Vibes',cursive}.portal-card{max-width:540px;width:100%;padding:44px 26px 38px;border:1px solid var(--gold-border);border-radius:12px;background:rgba(22,9,13,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 25px 65px rgba(0,0,0,0.9),inset 0 0 35px rgba(243,202,133,0.08)}.arabic-bismillah{font-family:'Amiri',serif;font-size:28px;color:var(--gold-bright);margin-bottom:6px;text-shadow:0 0 10px rgba(243,202,133,0.3)}.durood{font-size:17px;font-style:italic;color:#eed6c9;margin-bottom:14px}.eyebrow{font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}h1{font-size:clamp(42px,10vw,58px);line-height:1.05;color:#fff6ee;margin-bottom:4px;text-shadow:0 0 22px rgba(243,202,133,0.4)}.bride-sub{font-size:25px;font-style:italic;color:#ffe8d6;margin-bottom:18px}.date-loc{font-size:17px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid rgba(243,202,133,0.2)}.private-notice-box{background:rgba(243,202,133,0.07);border:1px solid var(--gold-border);border-radius:8px;padding:20px 18px;margin-bottom:24px;text-align:center}.private-notice-box .notice-icon{font-size:28px;margin-bottom:8px}.private-notice-box p{font-size:18px;color:#f7e6d9;line-height:1.5;margin-bottom:4px}.private-notice-box small{display:block;font-size:14px;color:#c9b1aa;font-style:italic;margin-top:6px}.contacts-footer{margin-top:14px;padding-top:18px;border-top:1px solid rgba(243,202,133,0.2);display:flex;justify-content:center;flex-wrap:wrap;gap:16px;font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.08em;color:#c9b1aa}.contacts-footer a{color:var(--gold-bright);text-decoration:none;font-weight:600}.contacts-footer a:hover{text-decoration:underline}.family-toggle-btn{margin-top:26px;background:transparent;border:1px dashed rgba(243,202,133,0.3);color:#b59b92;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 14px;border-radius:20px;cursor:pointer;transition:all 0.2s}.family-toggle-btn:hover{color:var(--gold-bright);border-color:var(--gold)}#familyPanel{display:none;margin-top:24px;padding-top:22px;border-top:1px solid var(--gold-border);text-align:left}.family-panel-header{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;text-align:center}.link-row{background:#190a0f;border:1px solid var(--gold-border);border-radius:6px;padding:12px 14px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:10px}.link-info{flex:1}.link-title{font-size:17px;font-weight:600;color:#fff;margin-bottom:2px}.link-meta{font-family:'Montserrat',sans-serif;font-size:10px;color:var(--gold);letter-spacing:0.05em}.link-btn{background:#2b1118;border:1px solid var(--gold-border);color:var(--gold-bright);padding:6px 12px;border-radius:4px;font-family:'Montserrat',sans-serif;font-size:10.5px;text-decoration:none;font-weight:600;white-space:nowrap}.link-btn:hover{background:var(--gold);color:#120508}.copy-btn{background:transparent;border:1px solid var(--gold-border);color:#eed6c9;padding:6px 10px;border-radius:4px;font-size:10.5px;cursor:pointer;font-family:'Montserrat',sans-serif}.copy-btn:hover{color:#fff;border-color:var(--gold-bright)}*,*::before,*::after{-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important;-webkit-user-drag:none!important}input,textarea{-webkit-user-select:text!important;user-select:text!important}video,img{pointer-events:none;user-select:none;-webkit-user-drag:none}</style></head><body oncontextmenu="return false;" ondragstart="return false;"><div class="portal-card"><div class="arabic-bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div><div class="durood">With the blessings of Mohammed O Aly’ Mohammed</div><div class="eyebrow">The Royal Wedding Celebrations</div><h1 class="script">Shazeb Asghar</h1><div class="bride-sub">with Daughter of Waqar Abbas</div><div class="date-loc">December 2026 · Chakwal, Pakistan</div><div class="private-notice-box"><div class="notice-icon">💌</div><p>Please open the personalized invitation link sent directly to you by the family.</p><small>Each guest invitation is uniquely personalized for their respective wedding events.</small></div><div class="contacts-footer"><span>📞 Asghar Abbas: <a href="tel:03345781214">0334-5781214</a></span><span>•</span><span>📞 Jazeb Asghar: <a href="tel:03325781214">0332-5781214</a></span></div><div><button class="family-toggle-btn" id="familyToggleBtn" type="button">🗝️ Family &amp; Host Portal</button></div><div id="familyPanel"><div class="family-panel-header">Family Shareable Invitation Links</div><div class="link-row"><div class="link-info"><div class="link-title">Musical Night, Barat + Walima</div><div class="link-meta">16 – 18 Dec · Musical Night, Barat &amp; Walima</div></div><a class="link-btn" href="barat-walima" target="_blank">Open</a><button class="copy-btn" onclick="copyLink('barat-walima', this)">📋 Copy</button></div><div class="link-row"><div class="link-info"><div class="link-title">Musical Night + Walima</div><div class="link-meta">16 &amp; 18 Dec · Musical Night &amp; Walima Only</div></div><a class="link-btn" href="mehndi-walima" target="_blank">Open</a><button class="copy-btn" onclick="copyLink('mehndi-walima', this)">📋 Copy</button></div><div class="link-row"><div class="link-info"><div class="link-title">Walima Only</div><div class="link-meta">18 Dec · City Marriage Hall Only</div></div><a class="link-btn" href="walima" target="_blank">Open</a><button class="copy-btn" onclick="copyLink('walima', this)">📋 Copy</button></div><div class="link-row"><div class="link-info"><div class="link-title">Complete Celebrations</div><div class="link-meta">15 – 18 Dec · All 4 Ceremonies</div></div><a class="link-btn" href="complete-invitation" target="_blank">Open</a><button class="copy-btn" onclick="copyLink('complete-invitation', this)">📋 Copy</button></div></div></div><script>(function(){
+document.addEventListener('contextmenu',function(e){e.preventDefault();return false;},{capture:true});
+document.addEventListener('dragstart',function(e){e.preventDefault();return false;},{capture:true});
+document.addEventListener('keydown',function(e){
+if(e.keyCode===123||e.key==='F12'){e.preventDefault();e.stopPropagation();return false;}
+if(e.ctrlKey&&e.shiftKey&&['I','i','J','j','C','c','K','k'].includes(e.key)){e.preventDefault();e.stopPropagation();return false;}
+if(e.ctrlKey&&['U','u','S','s','P','p'].includes(e.key)){e.preventDefault();e.stopPropagation();return false;}
+if(e.metaKey&&(e.altKey||e.shiftKey)&&['I','i','J','j','C','c','U','u'].includes(e.key)){e.preventDefault();e.stopPropagation();return false;}
+if(e.metaKey&&['U','u','S','s','P','p'].includes(e.key)){e.preventDefault();e.stopPropagation();return false;}
+},{capture:true});
+if(window.console){try{const _n=function(){};console.log=_n;console.info=_n;console.warn=_n;console.debug=_n;}catch(e){}}
+})();
 const familyToggle = document.getElementById('familyToggleBtn');
 const familyPanel = document.getElementById('familyPanel');
-
 familyToggle.onclick = () => {
-  if (familyPanel.style.display === 'block') {
-    familyPanel.style.display = 'none';
-  } else {
-    const pin = prompt("Enter Family Access PIN:");
-    if (pin === "1214") {
-      familyPanel.style.display = 'block';
-      familyToggle.style.display = 'none';
-    } else if (pin !== null) {
-      alert("Incorrect PIN.");
-    }
-  }
-};
-
-function copyLink(filename, btn) {
-  const url = window.location.origin + '/' + filename;
-  navigator.clipboard.writeText(url).then(() => {
-    const oldText = btn.textContent;
-    btn.textContent = '✓ Copied!';
-    setTimeout(() => btn.textContent = oldText, 2000);
-  }).catch(() => {
-    prompt("Copy this invitation link:", url);
-  });
+if (familyPanel.style.display === 'block') {
+familyPanel.style.display = 'none';
+} else {
+const pin = prompt("Enter Family Access PIN:");
+if (pin === "1214") {
+familyPanel.style.display = 'block';
+familyToggle.style.display = 'none';
+} else if (pin !== null) {
+alert("Incorrect PIN.");
 }
-</script>
-
-</body>
-</html>
+}
+};
+function copyLink(slug, btn) { const clean = slug.replace(/\.html$/, "");
+const url = window.location.origin + '/' + clean;
+navigator.clipboard.writeText(url).then(() => {
+const oldText = btn.textContent;
+btn.textContent = '✓ Copied!';
+setTimeout(() => btn.textContent = oldText, 2000);
+}).catch(() => {
+prompt("Copy this invitation link:", url);
+});
+}</script></body></html>
